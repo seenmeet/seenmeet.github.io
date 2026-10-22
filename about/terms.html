@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | DouZhuan Studio</title>
+    <meta name="description" content="Terms of Service: For all apps, games and mini programs published by DouZhuan Studio / 服务条款: 适用于DouZhuan Studio发布的所有 App、游戏与小程序">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #2563eb 100%); }
+        .policy h2 { font-size: 1.25rem; font-weight: 700; color: #111827; margin: 2.5rem 0 0.75rem; scroll-margin-top: 6rem; }
+        .policy h3 { font-weight: 600; color: #1f2937; margin: 1.25rem 0 0.5rem; }
+        .policy p, .policy li { color: #4b5563; line-height: 1.8; }
+        .policy p { margin-bottom: 0.75rem; }
+        .policy ul { list-style: disc; padding-left: 1.25rem; margin-bottom: 0.75rem; }
+        .policy li { margin-bottom: 0.35rem; }
+        .policy a { color: #2563eb; text-decoration: underline; text-underline-offset: 2px; overflow-wrap: anywhere; }
+        .policy table { width: 100%; border-collapse: collapse; margin: 0.75rem 0 1rem; font-size: 0.9rem; }
+        .policy th, .policy td { border: 1px solid #e5e7eb; padding: 0.6rem 0.75rem; text-align: left; vertical-align: top; color: #4b5563; }
+        .policy th { background: #f3f4f6; color: #111827; font-weight: 600; }
+        .policy td:last-child { white-space: nowrap; width: 1%; }
+        .lang-select { appearance: none; -webkit-appearance: none; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%234b5563' stroke-width='3'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 0.7rem center; padding: 0.35rem 2rem 0.35rem 0.9rem; }
+        [data-lang] { display: none; }
+        html[data-show="en"] [data-lang="en"] { display: block; }
+        html[data-show="en"] span[data-lang="en"] { display: inline; }
+        html[data-show="zh"] [data-lang="zh"] { display: block; }
+        html[data-show="zh"] span[data-lang="zh"] { display: inline; }
+        html[data-show="ko"] [data-lang="ko"] { display: block; }
+        html[data-show="ko"] span[data-lang="ko"] { display: inline; }
+        html[data-show="pt"] [data-lang="pt"] { display: block; }
+        html[data-show="pt"] span[data-lang="pt"] { display: inline; }
+    </style>
+    <script>
+        // 语言：?lang= 优先；否则看浏览器首选语言（中文、韩文、葡萄牙文有对应版本，其他一律英文）
+        (function () {
+            var supported = ['en', 'zh', 'ko', 'pt'];
+            var q = new URLSearchParams(location.search).get('lang');
+            var pref = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+            var guess = pref.slice(0, 2).toLowerCase();
+            var lang = supported.indexOf(q) >= 0 ? q : (supported.indexOf(guess) >= 0 ? guess : supported[0]);
+            document.documentElement.setAttribute('data-show', lang);
+        })();
+    </script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <nav class="bg-white/95 backdrop-blur shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center gap-4">
+            <span class="text-xl font-extrabold text-blue-700 shrink-0">DouZhuan Studio</span>
+            <div class="flex items-center gap-4">
+
+                <label class="sr-only" for="lang-select">Language</label>
+                <select id="lang-select" class="lang-select rounded-full border border-gray-200 text-sm font-semibold text-gray-700">
+                    <option value="en">English</option>
+                    <option value="zh">中文</option>
+                    <option value="ko">한국어</option>
+                    <option value="pt">Português</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-gradient text-white py-14 sm:py-16">
+        <div class="container mx-auto px-4 sm:px-6 max-w-3xl">
+            <div data-lang="en" lang="en">
+                <h1 class="text-3xl sm:text-4xl font-extrabold mb-3">Terms of Service</h1>
+                <p class="opacity-80">For all apps, games and mini programs published by DouZhuan Studio</p>
+                <p class="opacity-60 text-sm mt-4">Effective: October 21, 2026 · Last updated: October 21, 2026</p>
+            </div>
+            <div data-lang="zh" lang="zh-CN">
+                <h1 class="text-3xl sm:text-4xl font-extrabold mb-3">服务条款</h1>
+                <p class="opacity-80">适用于DouZhuan Studio发布的所有 App、游戏与小程序</p>
+                <p class="opacity-60 text-sm mt-4">生效日期：2026 年 10 月 21 日 · 最近更新：2026 年 10 月 21 日</p>
+            </div>
+            <div data-lang="ko" lang="ko">
+                <h1 class="text-3xl sm:text-4xl font-extrabold mb-3">서비스 약관</h1>
+                <p class="opacity-80">DouZhuan Studio가 배포하는 모든 앱, 게임 및 미니 프로그램에 적용됩니다</p>
+                <p class="opacity-60 text-sm mt-4">시행일: 2026년 10월 21일 · 최종 수정일: 2026년 10월 21일</p>
+            </div>
+            <div data-lang="pt" lang="pt-BR">
+                <h1 class="text-3xl sm:text-4xl font-extrabold mb-3">Termos de Serviço</h1>
+                <p class="opacity-80">Para todos os apps, jogos e miniprogramas publicados por DouZhuan Studio</p>
+                <p class="opacity-60 text-sm mt-4">Vigência: 21 de outubro de 2026 · Última atualização: 21 de outubro de 2026</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 max-w-3xl py-10 sm:py-14">
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-10">
+            <!-- ==================== English ==================== -->
+            <article class="policy" data-lang="en" lang="en">
+                <p>Welcome to the products of DouZhuan Studio ("we", "us"). These Terms of Service (the "Terms") apply to all apps, games and mini programs / mini games we publish (together, the "Products"), whether you get them from the Apple App Store, Google Play, WeChat or another mini program platform, or any other channel.</p>
+                <p><strong>By downloading, installing, opening or using a Product, you confirm that you have read and agree to these Terms and our <a href="./privacy.html">Privacy Policy</a>.</strong> If you do not agree, please do not use the Products. Provisions in bold significantly affect your rights; please read them carefully.</p>
+
+                <h2 id="en-eligibility">1. Eligibility</h2>
+                <p>You must have the legal capacity required in your region to agree to these Terms. Minors should read these Terms and use the Products, including making any purchases, only with a parent's or guardian's consent and guidance. In mainland China, games follow the applicable rules on preventing gaming addiction among minors, and the platform may require real-name verification and limit minors' playing time and spending.</p>
+
+                <h2 id="en-platforms">2. App stores and mini program platforms</h2>
+                <p>When you get a Product from the Apple App Store, Google Play, WeChat or another platform, that platform's terms and rules also apply. These Terms are an agreement between you and us only; the platforms are not parties to these Terms and are not responsible for the Products or their content.</p>
+                <p><strong>Apple users:</strong> For Products downloaded from the App Store, Apple's <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Licensed Application End User License Agreement (Standard EULA)</a> also applies; where it conflicts with these Terms with respect to Apple, the Standard EULA prevails. Apple has no obligation to provide maintenance or support for the Products, and we, not Apple, are responsible for addressing any claims relating to the Products (including product liability, legal or regulatory compliance, and intellectual property infringement claims). Apple and its subsidiaries are third-party beneficiaries of these Terms and may enforce them against you once you accept them.</p>
+
+                <h2 id="en-license">3. License</h2>
+                <p>Subject to your compliance with these Terms, we grant you a personal, non-exclusive, non-transferable, non-sublicensable and revocable license to use the Products on devices you own or control, for your personal, non-commercial purposes. The Products are licensed, not sold, to you.</p>
+
+                <h2 id="en-conduct">4. Acceptable use</h2>
+                <p>When using the Products, you must not:</p>
+                <ul>
+                    <li>Reverse engineer, decompile, crack or attempt to extract the source code of the Products, except where the law expressly permits;</li>
+                    <li>Use cheats, mods, scripts or other unauthorized tools, or exploit bugs to gain an unfair advantage;</li>
+                    <li>Interfere with, attack or disrupt the Products, servers or networks;</li>
+                    <li>Copy, sell, rent, sublicense or otherwise commercially exploit the Products or their content;</li>
+                    <li>Upload or share content that is illegal, infringing, pornographic, violent or otherwise inappropriate;</li>
+                    <li>Use the Products in any way that violates applicable law or these Terms.</li>
+                </ul>
+                <p>If you violate these rules, we may, as appropriate, restrict features, revoke rewards or terminate your license.</p>
+
+                <h2 id="en-purchases">5. Paid content and virtual items</h2>
+                <ul>
+                    <li>The Products may offer paid content such as unlocked features, ad removal (such as VIP), virtual items or in-game currency. Prices are as shown by the store or platform at the time of purchase.</li>
+                    <li>Payments are processed by Apple, Google, WeChat Pay or the relevant platform and are subject to their terms.</li>
+                    <li>Virtual items and in-game currency can only be used in the relevant Product, have no real-world monetary value, cannot be exchanged for cash, and cannot be transferred or traded, except where the law requires otherwise. We grant you a limited license to use them; you do not own them.</li>
+                    <li><strong>Refunds follow the policy of the platform you purchased from:</strong> request App Store refunds through Apple (<a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>), Google Play refunds through Google Play, and mini program purchases through the relevant platform or by contacting us. Mandatory statutory rights, such as the withdrawal rights of consumers in Europe, South Korea or Brazil, are not affected.</li>
+                    <li>One-time purchases (such as "lifetime" VIP) remain valid for as long as the Product is offered. After deleting a Product, you can restore them with "Restore purchases" under the same store account.</li>
+                </ul>
+
+                <h2 id="en-ads">6. Advertising</h2>
+                <p>Free Products may show ads provided by third parties. Advertisers are responsible for their ads, and we make no guarantees about the products or services advertised. Any dealings between you and an advertiser are solely between you and that advertiser. See our <a href="./privacy.html">Privacy Policy</a> for your ad privacy choices.</p>
+
+                <h2 id="en-ip">7. Intellectual property</h2>
+                <p>The Products and their software, graphics, music, text, trademarks and other content are owned by us or our licensors and are protected by law. Third-party materials used in the Products (such as images) are used under their respective licenses and credited in the Products. All rights not expressly granted to you in these Terms are reserved.</p>
+
+                <h2 id="en-copyright">8. Copyright complaints</h2>
+                <p>We respect the intellectual property rights of others. If you believe that content in a Product infringes your copyright, please send a notice using the email address listed under "Developer contact" on the relevant product's Google Play store page that includes: (a) a description of the copyrighted work; (b) where the material is located in the Product; (c) your name and contact information; (d) a statement that you have a good-faith belief that the use is not authorized by the owner, its agent or the law; (e) a statement, under penalty of perjury, that the information in your notice is accurate and that you are the owner or authorized to act on the owner's behalf; and (f) your physical or electronic signature. We will review the notice and, where appropriate, remove or disable the material, and may terminate the access of repeat infringers.</p>
+
+                <h2 id="en-content">9. Your content</h2>
+                <p>Some Products let you create content from your own photos or share your results. You must have the right to use any content you use, and you are responsible for it. Such content stays on your device by default, and we do not acquire ownership of it.</p>
+
+                <h2 id="en-changes-service">10. Changes, interruptions and termination</h2>
+                <p>We may update, modify, suspend or discontinue the Products or any part of them (including content, levels or events), and the service may be interrupted for maintenance, upgrades, network issues or third-party reasons. If paid content is discontinued, we will handle it in accordance with applicable law and platform rules. You may stop using and delete the Products at any time. Your license terminates automatically if you breach these Terms.</p>
+
+                <h2 id="en-disclaimer">11. Disclaimer of warranties</h2>
+                <p><strong>To the maximum extent permitted by law, the Products are provided "as is" and "as available", without warranties of any kind, express or implied, including warranties of merchantability, fitness for a particular purpose, non-infringement, or that the Products will be uninterrupted, error-free or free of viruses.</strong></p>
+
+                <h2 id="en-liability">12. Limitation of liability</h2>
+                <p><strong>To the maximum extent permitted by law, we are not liable for any indirect, incidental, special, consequential or punitive damages, including loss of data or profits. Our total liability relating to the Products is limited to the amount you actually paid for the relevant Product in the 12 months before the claim.</strong> These limits do not apply to liability that cannot be excluded or limited by law, such as liability for intentional misconduct, gross negligence or personal injury, and do not affect your statutory rights as a consumer.</p>
+
+                <h2 id="en-law">13. Governing law and disputes</h2>
+                <p>These Terms are governed by the laws of the People's Republic of China (for the purposes of these Terms, excluding the laws of Hong Kong, Macau and Taiwan). Any dispute arising from these Terms or the Products should first be resolved through friendly negotiation; if that fails, either party may bring a lawsuit before the competent people's court where we are domiciled. If the law of your region gives you a mandatory right to sue in your local courts or to rely on local consumer protection laws, those rights are not affected.</p>
+
+                <h2 id="en-terms-changes">14. Changes to these Terms</h2>
+                <p>We may update these Terms from time to time by posting the new version on this page and updating the "Last updated" date. For significant changes, we will also let you know in the Product or by other appropriate means. By continuing to use the Products after the changes take effect, you accept the updated Terms; if you do not agree, please stop using the Products.</p>
+
+                <h2 id="en-general">15. General</h2>
+                <ul>
+                    <li><strong>Entire agreement:</strong> these Terms and the Privacy Policy are the entire agreement between you and us regarding the Products.</li>
+                    <li><strong>Severability and waiver:</strong> if any provision is found invalid or unenforceable, the remaining provisions remain in effect. Our failure or delay in exercising any right is not a waiver of that right.</li>
+                    <li><strong>Assignment:</strong> you may not assign your rights or obligations under these Terms without our written consent.</li>
+                    <li><strong>Electronic communications:</strong> you agree that notices and other communications we provide electronically, such as on this page or in the Products, satisfy any legal requirement that they be in writing.</li>
+                    <li><strong>Network charges:</strong> your mobile carrier or network provider may charge for data used by the Products; you are responsible for these charges.</li>
+                    <li><strong>Language:</strong> these Terms are provided in several languages. If the versions differ, the Chinese version prevails in mainland China and the English version prevails elsewhere, unless local law requires the local-language version to prevail.</li>
+                </ul>
+
+                <h2 id="en-contact">16. Contact us</h2>
+                <p>If you have any questions about these Terms, please contact:</p>
+                <ul>
+                    <li>DouZhuan Studio</li>
+                    <li>Contact: please use the email address listed under "Developer contact" on the relevant product's Google Play store page</li>
+                </ul>
+            </article>
+
+            <!-- ==================== 中文 ==================== -->
+            <article class="policy" data-lang="zh" lang="zh-CN">
+                <p>欢迎使用DouZhuan Studio（以下简称“我们”）的产品。本服务条款（以下简称“本条款”）适用于我们发布的所有 App、游戏和小程序 / 小游戏（以下统称“产品”），无论您是通过 Apple App Store、Google Play、微信等小程序平台还是其他渠道获得。</p>
+                <p><strong>下载、安装、打开或使用产品，即表示您已阅读并同意本条款和我们的<a href="./privacy.html">隐私政策</a>。</strong>如果您不同意，请不要使用产品。本条款中加粗的内容与您的权益关系重大，请特别留意。</p>
+
+                <h2 id="zh-eligibility">一、使用资格</h2>
+                <p>您应具备与您所在地区法律相适应的民事行为能力。未成年人应在监护人的同意和指导下阅读本条款并使用产品，包括进行任何购买。在中国大陆，游戏产品会遵守未成年人防沉迷的相关规定，平台可能要求您完成实名认证，并对未成年人的游戏时长和消费进行限制。</p>
+
+                <h2 id="zh-platforms">二、应用商店和小程序平台</h2>
+                <p>您通过 Apple App Store、Google Play 或微信等平台获得产品时，还需要遵守该平台的服务条款和规则。本条款是您与我们之间的协议，这些平台不是本条款的一方，不对产品及其内容负责。</p>
+                <p><strong>Apple 设备用户：</strong>对于从 App Store 下载的产品，Apple 的<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">标准最终用户许可协议（EULA）</a>同样适用；如与本条款冲突，在涉及 Apple 的范围内以 Apple 的标准 EULA 为准。Apple 没有义务为产品提供维护和支持；关于产品的任何索赔（包括产品责任、违反法律法规或知识产权侵权的索赔）由我们而非 Apple 负责处理。Apple 及其子公司是本条款的第三方受益人，有权在您接受本条款后向您执行本条款。</p>
+
+                <h2 id="zh-license">三、使用许可</h2>
+                <p>在您遵守本条款的前提下，我们授予您一项个人的、非独占的、不可转让、不可再许可、可撤销的许可，允许您在您拥有或控制的设备上，为个人非商业目的使用产品。产品是许可您使用，而不是出售给您。</p>
+
+                <h2 id="zh-conduct">四、使用规范</h2>
+                <p>使用产品时，您不得：</p>
+                <ul>
+                    <li>对产品进行反向工程、反编译、破解，或试图获取源代码，法律明确允许的除外；</li>
+                    <li>使用外挂、修改器、脚本或其他未经授权的工具，或利用漏洞获取不正当利益；</li>
+                    <li>干扰、攻击或破坏产品、服务器或网络的正常运行；</li>
+                    <li>复制、出售、出租、转授权或以其他方式商业利用产品或其内容；</li>
+                    <li>上传、分享违法、侵权、色情、暴力或其他不当内容；</li>
+                    <li>以任何违反法律法规或本条款的方式使用产品。</li>
+                </ul>
+                <p>如您违反上述规定，我们可以视情况采取限制功能、撤销奖励、终止许可等措施。</p>
+
+                <h2 id="zh-purchases">五、付费内容与虚拟物品</h2>
+                <ul>
+                    <li>产品可能提供付费内容，例如解锁功能、去除广告（如 VIP）、虚拟道具或游戏币。价格以购买时商店或平台显示的为准。</li>
+                    <li>付款由 Apple、Google、微信支付等平台处理，并受其条款约束。</li>
+                    <li>虚拟物品和游戏币仅能在相应产品内使用，没有现实货币价值，不能兑换现金，也不能转让或交易，法律另有规定的除外。我们授予您的是使用这些虚拟物品的有限许可，而不是其所有权。</li>
+                    <li><strong>退款按购买所用平台的政策处理：</strong>App Store 的购买请通过 Apple 申请（<a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>），Google Play 的购买请通过 Google Play 申请，小程序内的购买请通过对应平台或联系我们处理。法律强制规定的权利（例如欧洲、韩国、巴西消费者的法定撤回权）不受影响。</li>
+                    <li>一次性买断的内容（例如“永久” VIP）在产品持续提供期间有效。删除产品后，您可以通过“恢复购买”在同一商店账号下恢复。</li>
+                </ul>
+
+                <h2 id="zh-ads">六、广告</h2>
+                <p>免费产品可能展示由第三方提供的广告。广告内容由广告主负责，我们不对广告中的商品或服务作出保证。您与广告主之间的交易由您与广告主自行处理。广告相关的隐私选择见<a href="./privacy.html">隐私政策</a>。</p>
+
+                <h2 id="zh-ip">七、知识产权</h2>
+                <p>产品及其中的软件、图形、音乐、文字、商标和其他内容的知识产权归我们或我们的许可方所有，受法律保护。产品中使用的第三方素材（例如图片）按其各自的许可使用，并在产品中注明来源。本条款没有明确授予您的权利均予以保留。</p>
+
+                <h2 id="zh-copyright">八、版权投诉</h2>
+                <p>我们尊重他人的知识产权。如您认为产品中的内容侵犯了您的著作权，请通过对应产品在 Google Play 商店页面“开发者联系信息”中列出的邮箱向我们发送通知，并包含：（1）被侵权作品的说明；（2）侵权内容在产品中的位置；（3）您的姓名和联系方式；（4）您善意地相信该使用未经权利人、其代理人或法律授权的声明；（5）您保证通知内容真实准确，并且您是权利人或有权代表权利人的声明；（6）您的签名（实体或电子签名）。我们会审核通知，并视情况删除或屏蔽相关内容；对多次侵权者，我们可以终止其使用。</p>
+
+                <h2 id="zh-content">九、您的内容</h2>
+                <p>部分产品允许您使用自己的照片制作内容或分享成绩。您应确保对使用的内容拥有合法权利，并对此负责。这些内容默认只保存在您的设备上，我们不会因此取得其所有权。</p>
+
+                <h2 id="zh-changes-service">十、产品的变更、中断与终止</h2>
+                <p>我们可能会更新、修改、暂停或停止提供产品或其中的部分功能（包括内容、关卡或活动），也可能因维护、升级、网络或第三方原因造成服务中断。对于停止运营的付费内容，我们会按照法律规定和平台规则妥善处理。您可以随时停止使用并删除产品。您违反本条款时，我们给予您的许可自动终止。</p>
+
+                <h2 id="zh-disclaimer">十一、免责声明</h2>
+                <p><strong>在法律允许的最大范围内，产品按“现状”和“现有”提供，我们不对产品作出任何明示或默示的保证，包括适销性、特定用途适用性、不侵权，以及产品不中断、无错误、无病毒等。</strong></p>
+
+                <h2 id="zh-liability">十二、责任限制</h2>
+                <p><strong>在法律允许的最大范围内，我们不对任何间接、附带、特殊、后果性或惩罚性损失负责，包括数据丢失、利润损失等。我们对与产品有关的全部责任，以您在提出索赔前 12 个月内为相关产品实际支付的金额为限。</strong>上述限制不适用于法律规定不得排除或限制的责任，例如因故意或重大过失、人身伤害造成的责任，也不影响您作为消费者依法享有的权利。</p>
+
+                <h2 id="zh-law">十三、适用法律与争议解决</h2>
+                <p>本条款适用中华人民共和国法律（为本条款之目的，不包括香港、澳门和台湾地区的法律）。因本条款或产品产生的争议，双方应首先友好协商；协商不成的，任何一方均可向我们住所地有管辖权的人民法院提起诉讼。如您所在地区的法律赋予您向当地法院起诉或适用当地消费者保护法律的强制性权利，这些权利不受影响。</p>
+
+                <h2 id="zh-terms-changes">十四、条款的变更</h2>
+                <p>我们可能会不时更新本条款，并在本页面发布新版本、更新“最近更新”日期。重大变更会在产品内或通过其他适当方式提示。变更生效后您继续使用产品的，视为接受更新后的条款；如不同意，请停止使用产品。</p>
+
+                <h2 id="zh-general">十五、其他</h2>
+                <ul>
+                    <li><strong>完整协议：</strong>本条款与隐私政策构成您与我们之间关于产品的完整协议。</li>
+                    <li><strong>可分割性与弃权：</strong>本条款任何条款被认定无效或不可执行的，不影响其余条款的效力。我们未行使或延迟行使任何权利，不构成对该权利的放弃。</li>
+                    <li><strong>转让：</strong>未经我们书面同意，您不得转让本条款下的权利和义务。</li>
+                    <li><strong>电子通知：</strong>您同意我们以电子方式（例如本页面或产品内）提供的通知和其他信息，满足法律对书面形式的要求。</li>
+                    <li><strong>网络费用：</strong>使用产品产生的流量费用由您的运营商收取，由您自行承担。</li>
+                    <li><strong>语言：</strong>本条款以多种语言提供，各版本如有不一致，在中国大陆以中文版本为准，在其他地区以英文版本为准；当地法律要求以当地语言版本为准的，从其规定。</li>
+                </ul>
+
+                <h2 id="zh-contact">十六、联系我们</h2>
+                <p>如对本条款有任何疑问，请联系：</p>
+                <ul>
+                    <li>DouZhuan Studio</li>
+                    <li>联系方式：请使用对应产品在 Google Play 商店页面“开发者联系信息”中列出的邮箱</li>
+                </ul>
+            </article>
+
+            <!-- ==================== 한국어 ==================== -->
+            <article class="policy" data-lang="ko" lang="ko">
+                <p>DouZhuan Studio(이하 "당사")의 제품을 이용해 주셔서 감사합니다. 본 서비스 약관(이하 "약관")은 Apple App Store, Google Play, 위챗 등 미니 프로그램 플랫폼 또는 기타 경로로 제공되는 당사의 모든 앱, 게임 및 미니 프로그램/미니 게임(이하 통칭 "제품")에 적용됩니다.</p>
+                <p><strong>제품을 다운로드, 설치, 실행 또는 이용하면 본 약관과 당사의 <a href="./privacy.html">개인정보처리방침</a>을 읽고 동의한 것으로 봅니다.</strong> 동의하지 않는 경우 제품을 이용하지 마세요. 굵게 표시된 조항은 이용자의 권리에 중요한 영향을 미치므로 주의 깊게 읽어 주세요.</p>
+
+                <h2 id="ko-eligibility">1. 이용 자격</h2>
+                <p>이용자는 거주 지역의 법률이 요구하는 행위능력을 갖추어야 합니다. 미성년자는 부모 또는 법정대리인의 동의와 지도 아래 본 약관을 읽고 제품을 이용(구매 포함)해야 합니다. 중국 본토에서는 게임이 미성년자 게임 중독 방지 규정을 준수하며, 플랫폼이 실명 인증을 요구하고 미성년자의 이용 시간과 결제를 제한할 수 있습니다.</p>
+
+                <h2 id="ko-platforms">2. 앱 스토어 및 미니 프로그램 플랫폼</h2>
+                <p>Apple App Store, Google Play, 위챗 등 플랫폼에서 제품을 받는 경우 해당 플랫폼의 약관과 규칙도 적용됩니다. 본 약관은 이용자와 당사 간의 계약이며, 플랫폼은 본 약관의 당사자가 아니고 제품과 그 콘텐츠에 대해 책임지지 않습니다.</p>
+                <p><strong>Apple 이용자:</strong> App Store에서 다운로드한 제품에는 Apple의 <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">표준 최종 사용자 사용권 계약(Standard EULA)</a>도 적용되며, Apple과 관련하여 본 약관과 충돌하는 경우 표준 EULA가 우선합니다. Apple은 제품에 대한 유지보수나 지원을 제공할 의무가 없으며, 제품과 관련된 모든 청구(제조물 책임, 법규 준수, 지식재산권 침해 청구 포함)는 Apple이 아닌 당사가 처리합니다. Apple 및 그 자회사는 본 약관의 제3자 수익자로서, 이용자가 본 약관에 동의하면 이용자에게 본 약관을 집행할 수 있습니다.</p>
+
+                <h2 id="ko-license">3. 이용 허락</h2>
+                <p>이용자가 본 약관을 준수하는 것을 조건으로, 당사는 이용자가 소유하거나 관리하는 기기에서 개인적·비상업적 목적으로 제품을 이용할 수 있는 개인적, 비독점적, 양도 불가능, 재허락 불가능, 철회 가능한 이용권을 부여합니다. 제품은 이용자에게 판매되는 것이 아니라 이용이 허락되는 것입니다.</p>
+
+                <h2 id="ko-conduct">4. 이용 규칙</h2>
+                <p>제품을 이용할 때 다음 행위를 해서는 안 됩니다.</p>
+                <ul>
+                    <li>법률이 명시적으로 허용하는 경우를 제외하고 제품을 역설계, 디컴파일, 크랙하거나 소스 코드를 추출하려는 행위</li>
+                    <li>치트, 변조 프로그램, 스크립트 등 승인되지 않은 도구를 사용하거나 버그를 악용하여 부당한 이익을 얻는 행위</li>
+                    <li>제품, 서버 또는 네트워크를 방해, 공격 또는 교란하는 행위</li>
+                    <li>제품이나 그 콘텐츠를 복제, 판매, 대여, 재허락하거나 기타 상업적으로 이용하는 행위</li>
+                    <li>불법, 권리 침해, 음란, 폭력적이거나 기타 부적절한 콘텐츠를 업로드하거나 공유하는 행위</li>
+                    <li>관련 법률이나 본 약관을 위반하는 방식으로 제품을 이용하는 행위</li>
+                </ul>
+                <p>위 규칙을 위반하는 경우 당사는 상황에 따라 기능 제한, 보상 회수, 이용권 해지 등의 조치를 할 수 있습니다.</p>
+
+                <h2 id="ko-purchases">5. 유료 콘텐츠 및 가상 아이템</h2>
+                <ul>
+                    <li>제품은 기능 잠금 해제, 광고 제거(예: VIP), 가상 아이템, 게임 내 화폐 등 유료 콘텐츠를 제공할 수 있습니다. 가격은 구매 시점에 스토어나 플랫폼에 표시된 금액을 따릅니다.</li>
+                    <li>결제는 Apple, Google, 위챗페이 등 해당 플랫폼이 처리하며 각 플랫폼의 약관이 적용됩니다.</li>
+                    <li>가상 아이템과 게임 내 화폐는 해당 제품 안에서만 사용할 수 있고, 현실의 금전적 가치가 없으며, 법률에 달리 정한 경우를 제외하고 현금으로 교환하거나 양도·거래할 수 없습니다. 당사는 이에 대한 제한적인 이용권을 부여하며, 소유권을 이전하지 않습니다.</li>
+                    <li><strong>환불은 구매한 플랫폼의 정책을 따릅니다:</strong> App Store 구매는 Apple(<a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>)을 통해, Google Play 구매는 Google Play를 통해, 미니 프로그램 구매는 해당 플랫폼 또는 당사에 연락하여 요청해 주세요. 유럽, 대한민국, 브라질 소비자의 청약철회권 등 법률상 강행 규정에 따른 권리는 영향을 받지 않습니다.</li>
+                    <li>일회성 구매 항목(예: "평생" VIP)은 제품이 제공되는 동안 유효합니다. 제품을 삭제한 후에도 같은 스토어 계정에서 "구매 복원"으로 복원할 수 있습니다.</li>
+                </ul>
+
+                <h2 id="ko-ads">6. 광고</h2>
+                <p>무료 제품에는 제3자가 제공하는 광고가 표시될 수 있습니다. 광고 내용은 광고주가 책임지며, 당사는 광고된 상품이나 서비스를 보증하지 않습니다. 이용자와 광고주 간의 거래는 이용자와 광고주 사이에서 해결됩니다. 광고 관련 개인정보 선택권은 <a href="./privacy.html">개인정보처리방침</a>을 참고해 주세요.</p>
+
+                <h2 id="ko-ip">7. 지식재산권</h2>
+                <p>제품과 그 소프트웨어, 그래픽, 음악, 텍스트, 상표 및 기타 콘텐츠에 대한 권리는 당사 또는 당사의 라이선스 제공자에게 있으며 법률로 보호됩니다. 제품에 사용된 제3자 자료(예: 이미지)는 각각의 라이선스에 따라 사용되며 제품 내에 출처를 표시합니다. 본 약관에서 명시적으로 부여하지 않은 모든 권리는 당사에 유보됩니다.</p>
+
+                <h2 id="ko-copyright">8. 저작권 침해 신고</h2>
+                <p>당사는 타인의 지식재산권을 존중합니다. 제품의 콘텐츠가 귀하의 저작권을 침해한다고 생각되면 해당 제품의 Google Play 스토어 페이지 '개발자 연락처'에 기재된 이메일로 다음 내용을 포함한 신고를 보내 주세요: (1) 저작물에 대한 설명, (2) 제품 내 해당 자료의 위치, (3) 성명과 연락처, (4) 해당 이용이 권리자, 그 대리인 또는 법률에 의해 허락되지 않았다고 선의로 믿는다는 진술, (5) 신고 내용이 정확하며 귀하가 권리자이거나 권리자를 대리할 권한이 있다는 진술, (6) 서명(실물 또는 전자 서명). 당사는 신고를 검토하여 적절한 경우 해당 자료를 삭제하거나 차단하며, 반복 침해자의 이용을 중단시킬 수 있습니다.</p>
+
+                <h2 id="ko-content">9. 이용자의 콘텐츠</h2>
+                <p>일부 제품에서는 이용자의 사진으로 콘텐츠를 만들거나 기록을 공유할 수 있습니다. 이용자는 사용하는 콘텐츠에 대한 권리를 가지고 있어야 하며 그에 대한 책임을 집니다. 이러한 콘텐츠는 기본적으로 이용자의 기기에만 저장되며, 당사는 그 소유권을 취득하지 않습니다.</p>
+
+                <h2 id="ko-changes-service">10. 제품의 변경, 중단 및 종료</h2>
+                <p>당사는 제품 또는 그 일부(콘텐츠, 레벨, 이벤트 포함)를 업데이트, 변경, 일시 중단 또는 종료할 수 있으며, 유지보수, 업그레이드, 네트워크 또는 제3자 사유로 서비스가 중단될 수 있습니다. 유료 콘텐츠 제공을 종료하는 경우 관련 법률과 플랫폼 규칙에 따라 처리합니다. 이용자는 언제든지 제품 이용을 중단하고 삭제할 수 있습니다. 이용자가 본 약관을 위반하면 이용권은 자동으로 종료됩니다.</p>
+
+                <h2 id="ko-disclaimer">11. 보증의 부인</h2>
+                <p><strong>법률이 허용하는 최대 범위 내에서 제품은 "있는 그대로" 및 "이용 가능한 상태로" 제공되며, 당사는 상품성, 특정 목적에의 적합성, 비침해, 제품의 중단 없는 운영, 오류나 바이러스가 없음 등에 대해 명시적이든 묵시적이든 어떠한 보증도 하지 않습니다.</strong></p>
+
+                <h2 id="ko-liability">12. 책임의 제한</h2>
+                <p><strong>법률이 허용하는 최대 범위 내에서 당사는 데이터 손실이나 이익 손실을 포함한 간접적, 부수적, 특별, 결과적 또는 징벌적 손해에 대해 책임지지 않습니다. 제품과 관련한 당사의 총 책임은 청구 전 12개월 동안 이용자가 해당 제품에 실제로 지불한 금액으로 제한됩니다.</strong> 이러한 제한은 고의, 중과실 또는 신체 상해로 인한 책임 등 법률상 배제하거나 제한할 수 없는 책임에는 적용되지 않으며, 소비자로서 이용자의 법률상 권리에 영향을 미치지 않습니다.</p>
+
+                <h2 id="ko-law">13. 준거법 및 분쟁 해결</h2>
+                <p>본 약관은 중화인민공화국 법률(본 약관의 목적상 홍콩, 마카오, 대만의 법률은 제외)에 따릅니다. 본 약관이나 제품으로 인한 분쟁은 먼저 우호적인 협의로 해결하며, 협의가 이루어지지 않으면 어느 당사자든 당사 소재지를 관할하는 인민법원에 소송을 제기할 수 있습니다. 이용자가 거주하는 지역의 법률이 현지 법원에 제소하거나 현지 소비자 보호 법률을 적용받을 강행적 권리를 부여하는 경우, 그 권리는 영향을 받지 않습니다.</p>
+
+                <h2 id="ko-terms-changes">14. 약관의 변경</h2>
+                <p>당사는 수시로 본 약관을 변경할 수 있으며, 이 페이지에 새 버전을 게시하고 "최종 수정일"을 업데이트합니다. 중요한 변경 사항은 제품 내 또는 기타 적절한 방법으로 안내합니다. 변경이 시행된 후에도 제품을 계속 이용하면 변경된 약관에 동의한 것으로 보며, 동의하지 않으면 제품 이용을 중단해 주세요.</p>
+
+                <h2 id="ko-general">15. 기타</h2>
+                <ul>
+                    <li><strong>완전한 합의:</strong> 본 약관과 개인정보처리방침은 제품에 관한 이용자와 당사 간의 완전한 합의입니다.</li>
+                    <li><strong>분리 가능성 및 권리 불포기:</strong> 일부 조항이 무효이거나 집행할 수 없다고 판단되더라도 나머지 조항은 효력을 유지합니다. 당사가 권리를 행사하지 않거나 지연하더라도 그 권리를 포기한 것으로 보지 않습니다.</li>
+                    <li><strong>양도:</strong> 이용자는 당사의 서면 동의 없이 본 약관상의 권리와 의무를 양도할 수 없습니다.</li>
+                    <li><strong>전자적 통지:</strong> 당사가 전자적 방식(예: 이 페이지 또는 제품 내)으로 제공하는 통지와 기타 정보는 서면 요건을 충족하는 것으로 봅니다.</li>
+                    <li><strong>통신 요금:</strong> 제품 이용으로 발생하는 데이터 요금은 통신사가 부과하며 이용자가 부담합니다.</li>
+                    <li><strong>언어:</strong> 본 약관은 여러 언어로 제공됩니다. 버전 간에 차이가 있는 경우 중국 본토에서는 중국어 버전이, 그 밖의 지역에서는 영어 버전이 우선하며, 현지 법률이 현지어 버전의 우선을 요구하는 경우 그에 따릅니다.</li>
+                </ul>
+
+                <h2 id="ko-contact">16. 문의처</h2>
+                <p>본 약관에 관한 문의는 아래로 연락해 주세요.</p>
+                <ul>
+                    <li>DouZhuan Studio</li>
+                    <li>연락처: 해당 제품의 Google Play 스토어 페이지 '개발자 연락처'에 기재된 이메일을 이용해 주세요</li>
+                </ul>
+            </article>
+
+            <!-- ==================== Português ==================== -->
+            <article class="policy" data-lang="pt" lang="pt-BR">
+                <p>Boas-vindas aos produtos da DouZhuan Studio ("nós"). Estes Termos de Serviço (os "Termos") se aplicam a todos os apps, jogos e miniprogramas / minijogos que publicamos (em conjunto, os "Produtos"), obtidos pela Apple App Store, Google Play, WeChat ou outra plataforma de miniprogramas, ou por qualquer outro canal.</p>
+                <p><strong>Ao baixar, instalar, abrir ou usar um Produto, você confirma que leu e concorda com estes Termos e com a nossa <a href="./privacy.html">Política de Privacidade</a>.</strong> Se não concordar, não use os Produtos. As disposições em negrito afetam significativamente seus direitos; leia-as com atenção.</p>
+
+                <h2 id="pt-eligibility">1. Elegibilidade</h2>
+                <p>Você deve ter a capacidade civil exigida na sua região para aceitar estes Termos. Menores devem ler estes Termos e usar os Produtos, inclusive fazer compras, somente com o consentimento e a orientação dos pais ou responsáveis. Na China continental, os jogos seguem as regras de prevenção do vício em jogos entre menores, e a plataforma pode exigir verificação de identidade e limitar o tempo de jogo e os gastos de menores.</p>
+
+                <h2 id="pt-platforms">2. Lojas de apps e plataformas de miniprogramas</h2>
+                <p>Quando você obtém um Produto pela Apple App Store, Google Play, WeChat ou outra plataforma, os termos e regras dessa plataforma também se aplicam. Estes Termos são um acordo somente entre você e nós; as plataformas não são partes destes Termos e não são responsáveis pelos Produtos ou por seu conteúdo.</p>
+                <p><strong>Usuários Apple:</strong> para Produtos baixados da App Store, o <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Contrato de Licença de Usuário Final Padrão da Apple (EULA Padrão)</a> também se aplica; em caso de conflito com estes Termos no que se refere à Apple, prevalece o EULA Padrão. A Apple não tem obrigação de oferecer manutenção ou suporte para os Produtos, e nós, e não a Apple, somos responsáveis por tratar quaisquer reclamações relacionadas aos Produtos (incluindo responsabilidade pelo produto, conformidade legal ou regulatória e violação de propriedade intelectual). A Apple e suas subsidiárias são terceiras beneficiárias destes Termos e poderão exigi-los de você depois que você os aceitar.</p>
+
+                <h2 id="pt-license">3. Licença</h2>
+                <p>Desde que você cumpra estes Termos, concedemos a você uma licença pessoal, não exclusiva, intransferível, não sublicenciável e revogável para usar os Produtos em dispositivos que você possui ou controla, para fins pessoais e não comerciais. Os Produtos são licenciados, e não vendidos, a você.</p>
+
+                <h2 id="pt-conduct">4. Uso aceitável</h2>
+                <p>Ao usar os Produtos, você não deve:</p>
+                <ul>
+                    <li>Fazer engenharia reversa, descompilar, quebrar a proteção ou tentar extrair o código-fonte dos Produtos, exceto quando a lei permitir expressamente;</li>
+                    <li>Usar trapaças, mods, scripts ou outras ferramentas não autorizadas, ou explorar falhas para obter vantagem indevida;</li>
+                    <li>Interferir, atacar ou prejudicar os Produtos, servidores ou redes;</li>
+                    <li>Copiar, vender, alugar, sublicenciar ou explorar comercialmente os Produtos ou seu conteúdo;</li>
+                    <li>Enviar ou compartilhar conteúdo ilegal, que viole direitos, pornográfico, violento ou de outra forma inadequado;</li>
+                    <li>Usar os Produtos de qualquer forma que viole a lei aplicável ou estes Termos.</li>
+                </ul>
+                <p>Se você violar essas regras, poderemos, conforme o caso, restringir recursos, cancelar recompensas ou encerrar sua licença.</p>
+
+                <h2 id="pt-purchases">5. Conteúdo pago e itens virtuais</h2>
+                <ul>
+                    <li>Os Produtos podem oferecer conteúdo pago, como recursos desbloqueados, remoção de anúncios (como o VIP), itens virtuais ou moeda do jogo. Os preços são os exibidos pela loja ou plataforma no momento da compra.</li>
+                    <li>Os pagamentos são processados pela Apple, pelo Google, pelo WeChat Pay ou pela plataforma correspondente e estão sujeitos aos termos deles.</li>
+                    <li>Itens virtuais e moeda do jogo só podem ser usados no Produto correspondente, não têm valor monetário real, não podem ser trocados por dinheiro e não podem ser transferidos ou negociados, salvo quando a lei exigir o contrário. Concedemos a você uma licença limitada para usá-los; você não é proprietário deles.</li>
+                    <li><strong>Os reembolsos seguem a política da plataforma em que você comprou:</strong> peça reembolsos da App Store pela Apple (<a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>), do Google Play pelo Google Play e de compras em miniprogramas pela plataforma correspondente ou entrando em contato conosco. Direitos legais obrigatórios, como o direito de arrependimento do consumidor no Brasil (art. 49 do Código de Defesa do Consumidor), na Europa ou na Coreia do Sul, não são afetados.</li>
+                    <li>Compras únicas (como o VIP "vitalício") permanecem válidas enquanto o Produto for oferecido. Depois de excluir um Produto, você pode restaurá-las com "Restaurar compras" na mesma conta da loja.</li>
+                </ul>
+
+                <h2 id="pt-ads">6. Publicidade</h2>
+                <p>Produtos gratuitos podem exibir anúncios fornecidos por terceiros. Os anunciantes são responsáveis por seus anúncios, e não damos garantias sobre os produtos ou serviços anunciados. Qualquer relação entre você e um anunciante é exclusivamente entre vocês. Veja nossa <a href="./privacy.html">Política de Privacidade</a> para suas escolhas de privacidade em anúncios.</p>
+
+                <h2 id="pt-ip">7. Propriedade intelectual</h2>
+                <p>Os Produtos e seu software, gráficos, músicas, textos, marcas e demais conteúdos pertencem a nós ou aos nossos licenciadores e são protegidos por lei. Materiais de terceiros usados nos Produtos (como imagens) são usados conforme suas respectivas licenças e creditados nos Produtos. Todos os direitos não concedidos expressamente a você nestes Termos são reservados.</p>
+
+                <h2 id="pt-copyright">8. Reclamações de direitos autorais</h2>
+                <p>Respeitamos a propriedade intelectual de terceiros. Se você acredita que algum conteúdo de um Produto viola seus direitos autorais, envie uma notificação por meio de o e-mail indicado em "Contato do desenvolvedor" na página do produto na Google Play contendo: (a) a descrição da obra protegida; (b) onde o material está no Produto; (c) seu nome e dados de contato; (d) uma declaração de que você acredita de boa-fé que o uso não foi autorizado pelo titular, seu representante ou pela lei; (e) uma declaração, sob as penas da lei, de que as informações da notificação são verdadeiras e de que você é o titular ou está autorizado a agir em nome dele; e (f) sua assinatura física ou eletrônica. Analisaremos a notificação e, quando cabível, removeremos ou bloquearemos o material, podendo encerrar o acesso de infratores reincidentes.</p>
+
+                <h2 id="pt-content">9. Seu conteúdo</h2>
+                <p>Alguns Produtos permitem criar conteúdo a partir das suas próprias fotos ou compartilhar seus resultados. Você deve ter o direito de usar qualquer conteúdo que utilizar e é responsável por ele. Esse conteúdo fica no seu dispositivo por padrão, e não adquirimos a propriedade sobre ele.</p>
+
+                <h2 id="pt-changes-service">10. Alterações, interrupções e encerramento</h2>
+                <p>Podemos atualizar, modificar, suspender ou descontinuar os Produtos ou qualquer parte deles (incluindo conteúdos, fases ou eventos), e o serviço pode ser interrompido por manutenção, atualizações, problemas de rede ou motivos de terceiros. Se um conteúdo pago for descontinuado, trataremos o caso conforme a lei aplicável e as regras da plataforma. Você pode parar de usar e excluir os Produtos a qualquer momento. Sua licença termina automaticamente se você violar estes Termos.</p>
+
+                <h2 id="pt-disclaimer">11. Isenção de garantias</h2>
+                <p><strong>Na máxima extensão permitida por lei, os Produtos são fornecidos "no estado em que se encontram" e "conforme disponíveis", sem garantias de qualquer tipo, expressas ou implícitas, incluindo garantias de comercialização, adequação a uma finalidade específica, não violação, ou de que os Produtos funcionarão sem interrupções, erros ou vírus.</strong></p>
+
+                <h2 id="pt-liability">12. Limitação de responsabilidade</h2>
+                <p><strong>Na máxima extensão permitida por lei, não somos responsáveis por danos indiretos, incidentais, especiais, consequenciais ou punitivos, incluindo perda de dados ou lucros. Nossa responsabilidade total relacionada aos Produtos está limitada ao valor que você efetivamente pagou pelo Produto em questão nos 12 meses anteriores à reclamação.</strong> Esses limites não se aplicam à responsabilidade que não pode ser excluída ou limitada por lei, como em caso de dolo, culpa grave ou danos pessoais, e não afetam seus direitos legais como consumidor.</p>
+
+                <h2 id="pt-law">13. Lei aplicável e solução de disputas</h2>
+                <p>Estes Termos são regidos pelas leis da República Popular da China (para os fins destes Termos, excluindo as leis de Hong Kong, Macau e Taiwan). Qualquer disputa decorrente destes Termos ou dos Produtos deve primeiro ser resolvida por negociação amigável; se isso não for possível, qualquer das partes poderá ajuizar ação perante o tribunal popular competente do nosso domicílio. Se a lei da sua região lhe garantir o direito obrigatório de propor ação nos tribunais locais ou de invocar as leis locais de proteção ao consumidor, como o Código de Defesa do Consumidor no Brasil, esses direitos não são afetados.</p>
+
+                <h2 id="pt-terms-changes">14. Alterações nestes Termos</h2>
+                <p>Podemos atualizar estes Termos periodicamente, publicando a nova versão nesta página e atualizando a data de "Última atualização". Em caso de mudanças relevantes, também avisaremos no Produto ou por outros meios adequados. Ao continuar usando os Produtos depois que as mudanças entrarem em vigor, você aceita os Termos atualizados; se não concordar, pare de usar os Produtos.</p>
+
+                <h2 id="pt-general">15. Disposições gerais</h2>
+                <ul>
+                    <li><strong>Acordo integral:</strong> estes Termos e a Política de Privacidade constituem o acordo integral entre você e nós sobre os Produtos.</li>
+                    <li><strong>Independência das cláusulas e renúncia:</strong> se alguma disposição for considerada inválida ou inexequível, as demais permanecem em vigor. A falta ou o atraso no exercício de qualquer direito não significa renúncia a ele.</li>
+                    <li><strong>Cessão:</strong> você não pode ceder seus direitos ou obrigações destes Termos sem nosso consentimento por escrito.</li>
+                    <li><strong>Comunicações eletrônicas:</strong> você concorda que avisos e outras comunicações que fornecemos eletronicamente, como nesta página ou nos Produtos, atendem a qualquer exigência legal de forma escrita.</li>
+                    <li><strong>Tarifas de rede:</strong> sua operadora pode cobrar pelos dados usados pelos Produtos; você é responsável por essas cobranças.</li>
+                    <li><strong>Idioma:</strong> estes Termos são oferecidos em vários idiomas. Em caso de divergência, prevalece a versão em chinês na China continental e a versão em inglês nas demais regiões, salvo se a lei local exigir que prevaleça a versão no idioma local.</li>
+                </ul>
+
+                <h2 id="pt-contact">16. Fale conosco</h2>
+                <p>Se tiver dúvidas sobre estes Termos, entre em contato:</p>
+                <ul>
+                    <li>DouZhuan Studio</li>
+                    <li>Contato: use o e-mail indicado em "Contato do desenvolvedor" na página do produto na Google Play</li>
+                </ul>
+            </article>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 py-10">
+        <div class="container mx-auto px-6 text-center text-sm">
+            <p class="mb-2">© 2026 DouZhuan Studio. All Rights Reserved.</p>
+            <p class="flex flex-wrap justify-center gap-x-4 gap-y-1">
+                <a href="./privacy.html" class="hover:text-white transition hover:underline">Privacy Policy · 隐私政策</a>
+                <a href="./terms.html" class="hover:text-white transition hover:underline">Terms of Service · 服务条款</a>
+                
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            var root = document.documentElement;
+            var titles = {en: 'Terms of Service | DouZhuan Studio', zh: '服务条款 | DouZhuan Studio', ko: '서비스 약관 | DouZhuan Studio', pt: 'Termos de Serviço | DouZhuan Studio'};
+            var htmlLang = {en: 'en', zh: 'zh-CN', ko: 'ko', pt: 'pt-BR'};
+            var select = document.getElementById('lang-select');
+            function apply(lang) {
+                root.setAttribute('data-show', lang);
+                root.lang = htmlLang[lang];
+                document.title = titles[lang];
+                select.value = lang;
+            }
+            select.addEventListener('change', function () {
+                var url = new URL(location.href);
+                url.searchParams.set('lang', select.value);
+                history.replaceState(null, '', url);
+                apply(select.value);
+            });
+            apply(root.getAttribute('data-show'));
+        })();
+    </script>
+</body>
+
+</html>

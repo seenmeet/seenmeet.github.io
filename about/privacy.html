@@ -1,208 +1,673 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy Policy</title>
-<style>
-  body { margin:0; background:#fff; color:#222; font:16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; }
-  main { max-width:760px; margin:0 auto; padding:24px 16px 48px; }
-  h1 { font-size:26px; margin:8px 0 4px; }
-  h2 { font-size:18px; margin:28px 0 6px; }
-  h3 { font-size:16px; margin:16px 0 4px; }
-  p, li { margin:6px 0; }
-  ul { padding-left:22px; }
-  a { color:#0645ad; }
-  .meta { color:#666; font-size:14px; }
-  .lang { font-size:14px; text-align:right; }
-  .lang a { margin-left:12px; cursor:pointer; }
-  .lang a.on { color:#222; text-decoration:none; font-weight:600; }
-  [data-lang] { display:none; }
-  html[lang="en"] [data-lang="en"], html[lang="zh"] [data-lang="zh"] { display:block; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | DouZhuan Studio</title>
+    <meta name="description" content="Privacy Policy: For all apps, games and mini programs published by DouZhuan Studio / 隐私政策: 适用于DouZhuan Studio发布的所有 App、游戏与小程序">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #2563eb 100%); }
+        .policy h2 { font-size: 1.25rem; font-weight: 700; color: #111827; margin: 2.5rem 0 0.75rem; scroll-margin-top: 6rem; }
+        .policy h3 { font-weight: 600; color: #1f2937; margin: 1.25rem 0 0.5rem; }
+        .policy p, .policy li { color: #4b5563; line-height: 1.8; }
+        .policy p { margin-bottom: 0.75rem; }
+        .policy ul { list-style: disc; padding-left: 1.25rem; margin-bottom: 0.75rem; }
+        .policy li { margin-bottom: 0.35rem; }
+        .policy a { color: #2563eb; text-decoration: underline; text-underline-offset: 2px; overflow-wrap: anywhere; }
+        .policy table { width: 100%; border-collapse: collapse; margin: 0.75rem 0 1rem; font-size: 0.9rem; }
+        .policy th, .policy td { border: 1px solid #e5e7eb; padding: 0.6rem 0.75rem; text-align: left; vertical-align: top; color: #4b5563; }
+        .policy th { background: #f3f4f6; color: #111827; font-weight: 600; }
+        .policy td:last-child { white-space: nowrap; width: 1%; }
+        .lang-select { appearance: none; -webkit-appearance: none; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%234b5563' stroke-width='3'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 0.7rem center; padding: 0.35rem 2rem 0.35rem 0.9rem; }
+        [data-lang] { display: none; }
+        html[data-show="en"] [data-lang="en"] { display: block; }
+        html[data-show="en"] span[data-lang="en"] { display: inline; }
+        html[data-show="zh"] [data-lang="zh"] { display: block; }
+        html[data-show="zh"] span[data-lang="zh"] { display: inline; }
+        html[data-show="ko"] [data-lang="ko"] { display: block; }
+        html[data-show="ko"] span[data-lang="ko"] { display: inline; }
+        html[data-show="pt"] [data-lang="pt"] { display: block; }
+        html[data-show="pt"] span[data-lang="pt"] { display: inline; }
+    </style>
+    <script>
+        // 语言：?lang= 优先；否则看浏览器首选语言（中文、韩文、葡萄牙文有对应版本，其他一律英文）
+        (function () {
+            var supported = ['en', 'zh', 'ko', 'pt'];
+            var q = new URLSearchParams(location.search).get('lang');
+            var pref = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+            var guess = pref.slice(0, 2).toLowerCase();
+            var lang = supported.indexOf(q) >= 0 ? q : (supported.indexOf(guess) >= 0 ? guess : supported[0]);
+            document.documentElement.setAttribute('data-show', lang);
+        })();
+    </script>
 </head>
-<body>
-<main>
-<div class="lang"><a data-set="en">English</a><a data-set="zh">中文</a></div>
 
-<!-- ============================== English ============================== -->
-<section data-lang="en">
-<h1>Privacy Policy</h1>
-<p class="meta">Effective date: October 7, 2026 · Last updated: October 7, 2026</p>
+<body class="bg-gray-50 text-gray-800">
 
-<p>This Privacy Policy applies to all mobile apps and games published by <strong>DouZhuan Studio</strong> ("we", "us") on Google Play, the Apple App Store and other platforms (each an "App"). It explains what information is collected when you use our Apps, how it is used, and the choices you have.</p>
-<p>Not every App includes every feature or third-party service described below. Each section applies only to the Apps that use the feature it describes.</p>
+    <nav class="bg-white/95 backdrop-blur shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center gap-4">
+            <span class="text-xl font-extrabold text-blue-700 shrink-0">DouZhuan Studio</span>
+            <div class="flex items-center gap-4">
 
-<h2>1. Information we collect</h2>
-<p>Our Apps do not require you to create an account, and we do not ask for your name, email address, phone number or other contact details. We do not operate servers that store your personal information.</p>
+                <label class="sr-only" for="lang-select">Language</label>
+                <select id="lang-select" class="lang-select rounded-full border border-gray-200 text-sm font-semibold text-gray-700">
+                    <option value="en">English</option>
+                    <option value="zh">中文</option>
+                    <option value="ko">한국어</option>
+                    <option value="pt">Português</option>
+                </select>
+            </div>
+        </div>
+    </nav>
 
-<h3>1.1 Data stored on your device</h3>
-<p>Our Apps save data locally on your device so they work as expected, for example game progress, saved games, settings and preferences, and purchase status. This data stays on your device and is not sent to us. It is deleted when you uninstall the App.</p>
+    <header class="hero-gradient text-white py-14 sm:py-16">
+        <div class="container mx-auto px-4 sm:px-6 max-w-3xl">
+            <div data-lang="en" lang="en">
+                <h1 class="text-3xl sm:text-4xl font-extrabold mb-3">Privacy Policy</h1>
+                <p class="opacity-80">For all apps, games and mini programs published by DouZhuan Studio</p>
+                <p class="opacity-60 text-sm mt-4">Effective: October 21, 2026 · Last updated: October 21, 2026</p>
+            </div>
+            <div data-lang="zh" lang="zh-CN">
+                <h1 class="text-3xl sm:text-4xl font-extrabold mb-3">隐私政策</h1>
+                <p class="opacity-80">适用于DouZhuan Studio发布的所有 App、游戏与小程序</p>
+                <p class="opacity-60 text-sm mt-4">生效日期：2026 年 10 月 21 日 · 最近更新：2026 年 10 月 21 日</p>
+            </div>
+            <div data-lang="ko" lang="ko">
+                <h1 class="text-3xl sm:text-4xl font-extrabold mb-3">개인정보처리방침</h1>
+                <p class="opacity-80">DouZhuan Studio가 배포하는 모든 앱, 게임 및 미니 프로그램에 적용됩니다</p>
+                <p class="opacity-60 text-sm mt-4">시행일: 2026년 10월 21일 · 최종 수정일: 2026년 10월 21일</p>
+            </div>
+            <div data-lang="pt" lang="pt-BR">
+                <h1 class="text-3xl sm:text-4xl font-extrabold mb-3">Política de Privacidade</h1>
+                <p class="opacity-80">Para todos os apps, jogos e miniprogramas publicados por DouZhuan Studio</p>
+                <p class="opacity-60 text-sm mt-4">Vigência: 21 de outubro de 2026 · Última atualização: 21 de outubro de 2026</p>
+            </div>
+        </div>
+    </header>
 
-<h3>1.2 Photos and files you choose</h3>
-<p>Some Apps let you pick a photo or file, for example to use your own picture in a game. The App uses the system picker, so it only receives the items you select, not your whole library. Selected content is processed and stored locally on your device. We do not upload it to our servers or share it with third parties.</p>
+    <main class="container mx-auto px-4 sm:px-6 max-w-3xl py-10 sm:py-14">
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-10">
+            <!-- ==================== English ==================== -->
+            <article class="policy" data-lang="en" lang="en">
+                <p>DouZhuan Studio ("we", "us") cares about your privacy. This policy applies to all apps, games and mini programs / mini games we publish (together, the "Products"), whether you get them from the Apple App Store, Google Play, WeChat or another mini program platform, or any other channel. It explains what information the Products handle, why, who it is shared with, and the choices and rights you have.</p>
+                <p>Features differ between Products: anything described below as applying to "some Products" only applies to Products that offer that feature. If a Product handles data in a way this policy does not cover, we will say so on its store page or in the Product.</p>
+                <p>In short: our Products <strong>don't require an account</strong> and don't ask for your name, email or phone number; most game data stays on your device; and advertising, analytics, payments and mini program hosting are provided by the third-party services listed below. <strong>We do not sell your personal information.</strong></p>
 
-<h3>1.3 Information collected automatically by third-party services</h3>
-<p>When an App shows ads or processes purchases, the third-party services described in Section 3 may automatically collect information such as:</p>
-<ul>
-  <li>Device identifiers, such as the Google Advertising ID (Android) or IDFA (iOS, only if you allow tracking);</li>
-  <li>Device and app information, such as device model, operating system, language, screen size, network type and app version;</li>
-  <li>IP address and approximate location derived from it;</li>
-  <li>Usage and interaction data, such as ads viewed or clicked;</li>
-  <li>Diagnostic data, such as crash logs and performance data.</li>
-</ul>
+                <h2 id="en-collect">1. Information we handle</h2>
+                <h3>1.1 Data that stays on your device</h3>
+                <p>By default, game progress, saves, settings, records and scores, the unlock status of purchased items, and reminder times are stored only on your device and are not sent to us. They are deleted when you uninstall the app or delete the mini program.</p>
+                <h3>1.2 Photos and files you choose</h3>
+                <p>Some Products let you pick photos or files to create content. The Product can only read the items you select; they are processed and stored locally on your device and are never uploaded or shared with us or anyone else.</p>
+                <h3>1.3 Network requests for content</h3>
+                <p>When a Product downloads images, levels or other content from our content servers / CDN, those servers receive your IP address and basic technical data (such as the request time), as with any website. This is used only to deliver the content and keep the service running.</p>
+                <h3>1.4 Mini programs and mini games</h3>
+                <p>For mini programs running on WeChat or similar platforms, the platform gives us a pseudonymous identifier that distinguishes users (such as an OpenID). This does not give us your WeChat ID, nickname or phone number unless you explicitly agree to share them in the platform's permission prompt. Where a mini program offers cloud saves or leaderboards, that identifier and the related game data are stored in the cloud service provided by the platform, only to provide those features.</p>
+                <h3>1.5 Information collected automatically by third parties</h3>
+                <p>The advertising, analytics and payment services built into the Products (see Section 3) may automatically collect:</p>
+                <ul>
+                    <li>Device identifiers: on iOS, the Advertising Identifier (IDFA, only if you allow tracking) and the Identifier for Vendors (IDFV); on Android, the Advertising ID and App Set ID; and the Firebase app instance ID;</li>
+                    <li>Device and app information such as device model, OS version, language, time zone and Product version;</li>
+                    <li>Approximate region inferred from your IP address (we never read precise GPS location);</li>
+                    <li>Usage data, such as which levels or content you play, the difficulty chosen, time taken, which features you use, and ad impressions and clicks;</li>
+                    <li>Diagnostic data such as crash and performance information.</li>
+                </ul>
 
-<h3>1.4 Content requests</h3>
-<p>Some Apps download content, such as images or levels, from our content servers or content delivery networks. These requests include your IP address and basic technical information, which are used only to deliver the content.</p>
+                <h2 id="en-use">2. How we use information</h2>
+                <ul>
+                    <li>To provide the Products' features, save your progress and deliver reminders you turn on (local notifications scheduled on your device, not sent through our servers);</li>
+                    <li>To show ads, limit how often they appear, measure ad performance and prevent ad fraud;</li>
+                    <li>To process and restore purchases;</li>
+                    <li>To understand how features are used (in aggregate), fix problems and improve the Products;</li>
+                    <li>To adjust Product settings remotely (for example, ad frequency or event content) without an update;</li>
+                    <li>To keep the Products secure, prevent cheating and abuse, and comply with legal obligations.</li>
+                </ul>
 
-<h2>2. How information is used</h2>
-<ul>
-  <li>To provide the App's features and save your progress;</li>
-  <li>To show ads, limit how often ads appear, measure ad performance and prevent fraud;</li>
-  <li>To process purchases and restore them;</li>
-  <li>To fix problems and improve our Apps.</li>
-</ul>
-<p>We do not sell your personal information.</p>
+                <h2 id="en-third">3. Third-party services and sharing</h2>
+                <p>Our Products use, or may use, the following services (each Product uses only some of them), which process data under their own privacy policies:</p>
+                <table>
+                    <thead>
+                        <tr><th>Service</th><th>Purpose</th><th>Privacy policy</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Unity LevelPlay (ironSource)</td><td>Ad mediation</td><td><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">View</a></td></tr>
+                        <tr><td>Unity Ads</td><td>Advertising</td><td><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">View</a></td></tr>
+                        <tr><td>Google AdMob</td><td>Advertising</td><td><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">View</a></td></tr>
+                        <tr><td>AppLovin (MAX)</td><td>Advertising, ad mediation</td><td><a href="https://www.applovin.com/privacy/" target="_blank" rel="noopener">View</a></td></tr>
+                        <tr><td>Google Firebase (Analytics, Remote Config)</td><td>Usage analytics, remote configuration</td><td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">View</a></td></tr>
+                        <tr><td>Apple App Store / StoreKit</td><td>Distribution, in-app purchases</td><td><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">View</a></td></tr>
+                        <tr><td>Google Play / Google Play Billing</td><td>Distribution, in-app purchases</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">View</a></td></tr>
+                        <tr><td>WeChat Mini Programs, WeChat Pay (Tencent)</td><td>Mini program hosting, user identifiers, payments, cloud saves</td><td><a href="https://weixin.qq.com/cgi-bin/readtemplate?lang=zh_CN&t=weixin_agreement&s=privacy" target="_blank" rel="noopener">View</a></td></tr>
+                    </tbody>
+                </table>
+                <p>Ad mediation platforms may also pass ad requests to their partner ad networks under their own policies. Beyond these services, we only disclose information when required by law, to protect the rights of our users or ourselves, or in a merger, acquisition or similar transaction (where the recipient must continue to honor this policy). We will update this table when we add or change third-party services.</p>
+                <p><strong>We do not sell your personal information.</strong> However, our ad partners may use your device's advertising identifier to show personalized ads, which some laws (such as California's CCPA/CPRA) treat as "sharing" personal information. You can opt out by declining tracking or turning off personalized ads as described in Section 4.</p>
 
-<h2>3. Third-party services</h2>
-<p>Our Apps may use the following third-party services. They collect and process information under their own privacy policies:</p>
-<ul>
-  <li><strong>AppLovin (MAX)</strong> – advertising and ad mediation: <a href="https://www.applovin.com/privacy/" target="_blank" rel="noopener">https://www.applovin.com/privacy/</a>. AppLovin may work with other ad networks (mediation partners), which are listed in its policy.</li>
-  <li><strong>Google AdMob</strong> – advertising: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></li>
-  <li><strong>Google Play services / Google Play Billing</strong> – app distribution and in-app purchases: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></li>
-  <li><strong>Apple App Store / StoreKit</strong> – app distribution and in-app purchases: <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">https://www.apple.com/legal/privacy/</a></li>
-</ul>
+                <h2 id="en-ads">4. Advertising and your choices</h2>
+                <ul>
+                    <li><strong>iOS:</strong> When needed, the system shows Apple's App Tracking Transparency prompt. If you don't allow tracking, ads won't use the IDFA. You can change this anytime in Settings › Privacy &amp; Security › Tracking.</li>
+                    <li><strong>Android:</strong> You can reset or delete your Advertising ID, or opt out of personalized ads, in your device settings.</li>
+                    <li><strong>EEA, UK and Switzerland:</strong> We ask for your consent before showing ads for the first time. If you choose non-personalized ads, you will still see ads, but the Advertising ID won't be used to personalize them. You can change this anytime in the Product's ad privacy settings.</li>
+                    <li><strong>Mini programs:</strong> Ads in mini programs are served through the platform's ad components and can be managed in the platform's personalized ad settings.</li>
+                    <li><strong>Remove ads:</strong> Some Products offer a paid upgrade (such as VIP) that turns ads off.</li>
+                </ul>
 
-<h2>4. Advertising and your choices</h2>
-<p>Free versions of our Apps may display ads. Ads may be personalized based on the information described in Section 1.3. You can control this:</p>
-<ul>
-  <li><strong>iOS:</strong> the App asks for permission through Apple's App Tracking Transparency prompt. You can change your choice at any time in Settings › Privacy &amp; Security › Tracking.</li>
-  <li><strong>Android:</strong> you can reset or delete your Advertising ID, or opt out of personalized ads, in your device settings (usually Settings › Privacy › Ads).</li>
-  <li><strong>EEA, UK and Switzerland:</strong> the App asks for your consent before personalized ads are shown. Where provided, you can change your choice from the privacy option inside the App.</li>
-  <li><strong>Remove ads:</strong> where offered, a paid upgrade (such as VIP or "Remove Ads") turns off ads.</li>
-</ul>
+                <h2 id="en-analytics">5. Usage analytics</h2>
+                <p>We use tools such as Firebase Analytics to understand aggregated usage (for example, which content is most popular and average completion times) so we can improve the Products. Analytics data is linked to a randomly generated identifier, does not include your name, photos or similar details, and we don't use it to identify you. In Products that offer a usage analytics switch, you can turn it off in Settings; once off, no analytics data is sent.</p>
 
-<h2>5. In-app purchases</h2>
-<p>Purchases are processed by Apple or Google. Your payment information is handled by them and is never shared with us. The App only receives purchase confirmation information, such as the product ID and transaction status, so it can unlock content and restore purchases.</p>
+                <h2 id="en-iap">6. Purchases and payments</h2>
+                <p>In-app payments are processed by Apple or Google, and payments in mini programs by WeChat Pay or the relevant platform. We never receive your card or account details; we only receive confirmation data such as the product ID, order and transaction status, to deliver, unlock and restore purchases.</p>
 
-<h2>6. Sharing and external links</h2>
-<p>If you share content from an App, it is passed to your device's system share function, and you choose where it goes. Our Apps may contain links to external websites, such as credits for images. We are not responsible for the privacy practices of those websites.</p>
+                <h2 id="en-share">7. Sharing and external links</h2>
+                <p>Sharing results, images or other content uses your device's or platform's share function, and you decide who receives it. The Products may contain external links (for example, credits linking to an image's author); those websites' privacy practices are not covered by this policy.</p>
 
-<h2>7. Children's privacy</h2>
-<p>Our Apps are intended for a general audience and are not directed to children under 13 (or under 16 where local law requires). We do not knowingly collect personal information from children. If you believe a child has provided personal information through our Apps, please contact us and we will take steps to delete it.</p>
+                <h2 id="en-children">8. Children and minors</h2>
+                <p>Our Products are intended for a general audience and are not directed to children. We do not knowingly collect personal information from children. Age thresholds differ by region: under 14 in mainland China and South Korea, generally under 16 in the EEA and UK (or the age set by local law), under 13 in the United States, and children and adolescents as defined by law in Brazil. Users below these ages should use the Products only with a parent's or guardian's consent and guidance.</p>
+                <p>Games offered in mainland China follow the applicable rules on preventing gaming addiction among minors; real-name verification and related controls are generally provided by the platform. If you believe a child has provided us with personal information, please contact us and we will delete it after verification.</p>
 
-<h2>8. Data retention and security</h2>
-<p>Data stored on your device remains until you delete it or uninstall the App. Data collected by third-party services is retained according to their policies. We take reasonable measures to protect information, but no method of storage or transmission is completely secure.</p>
+                <h2 id="en-retention">9. Retention, security and international transfers</h2>
+                <p>Data on your device is kept until you delete it or uninstall the Product. Mini program cloud saves are deleted when you delete the mini program, ask us to delete them, or we stop offering the feature. Data collected by third-party services is retained under their policies. When information is no longer needed, it is deleted or anonymized so that it cannot be recovered. We use reasonable technical and organizational measures to protect information, but no method of transmission or storage is completely secure.</p>
+                <p>Third-party services may process data outside your country or region (for example, in the United States), with safeguards such as the EU Standard Contractual Clauses as described in their policies.</p>
 
-<h2>9. Your rights</h2>
-<p>Depending on where you live (for example under the GDPR, UK GDPR or CCPA/CPRA), you may have the right to access, correct or delete your personal information, object to or restrict its processing, and withdraw consent at any time. Because we do not store your personal information on our servers, you can exercise most of these rights directly on your device: delete data in the App, uninstall the App, change your consent choice, or reset your advertising identifier. For data held by third-party services, you may contact them directly, or contact us and we will help where we can. You also have the right to lodge a complaint with your local data protection authority.</p>
+                <h2 id="en-rights">10. Your rights and how to exercise them</h2>
+                <p>Depending on where you live, you may have the right to access, copy, correct or delete your personal information, to data portability, to restrict or object to processing, to withdraw consent, and to close your account (where applicable).</p>
+                <p>Because most data stays on your device, you can usually exercise these rights directly: delete in-Product data, uninstall the app or delete the mini program, change your ad consent, decline tracking, turn off usage analytics, or reset your Advertising ID. For data collected by third parties, you can also contact those services directly.</p>
+                <p><strong>To make a request to us,</strong> contact us using the email address listed under "Developer contact" on the relevant product's Google Play store page with the subject "Privacy Rights Request", and include:</p>
+                <ul>
+                    <li>The Product name and the platform you use (iOS, Android or mini program);</li>
+                    <li>What you are asking for (for example, access, deletion or withdrawal of consent);</li>
+                    <li>Any identifier that helps us find the data, if you want to provide it (for example, your Advertising ID or mini program user ID). We do not ask for more information than we need to verify and handle your request.</li>
+                </ul>
+                <p>We will verify your request and respond within the period required by applicable law (for example, one month under the GDPR, 45 days under the CCPA and 10 days under South Korea's PIPA). You may use an authorized agent where the law allows; we may ask the agent for proof of authorization. If we cannot fulfil your request, we will explain why, and where the law provides for it you may appeal by replying to our response. You also have the right to complain to your local data protection authority.</p>
 
-<h2>10. Changes to this policy</h2>
-<p>We may update this Privacy Policy from time to time. Changes will be posted on this page with a new "Last updated" date. Please review it periodically.</p>
+                <h2 id="en-regions">11. Additional regional information</h2>
+                <h3>Mainland China</h3>
+                <p>We process personal information in accordance with the Personal Information Protection Law (PIPL) and related regulations; the personal information handler is DouZhuan Studio. Where separate consent is required, such as for sensitive personal information or transfers outside China, we will ask for it separately.</p>
 
-<h2>11. Contact us</h2>
-<p>If you have any questions about this Privacy Policy, please contact us:<br>
-DouZhuan Studio<br>
-Email: <a href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a></p>
-</section>
+                <h3>EEA, UK and Switzerland</h3>
+                <p>Our legal bases for processing are: necessity to provide the service you request (performance of a contract); your consent (for example, for personalized ads, which you can withdraw at any time); our legitimate interests (for example, analytics, security and fraud prevention, where these are not overridden by your rights); and compliance with legal obligations.</p>
 
-<!-- ============================== 中文 ============================== -->
-<section data-lang="zh">
-<h1>隐私政策</h1>
-<p class="meta">生效日期：2026 年 10 月 7 日 · 最近更新：2026 年 10 月 7 日</p>
+                <h3>United States (including California)</h3>
+                <p>In the past 12 months, the Products may have collected the following categories of personal information, from your device and from the third-party services in Section 3, for the purposes in Section 2:</p>
+                <ul>
+                    <li><strong>Identifiers</strong>, such as device and advertising identifiers and IP address;</li>
+                    <li><strong>Internet or other electronic network activity</strong>, such as usage data and ad interactions;</li>
+                    <li><strong>Approximate geolocation</strong> inferred from IP address;</li>
+                    <li><strong>Commercial information</strong>, such as records of purchases made through the app stores;</li>
+                    <li><strong>Inferences</strong> that ad partners may draw to show more relevant ads.</li>
+                </ul>
+                <p>These categories are disclosed for business purposes to the analytics, payment and platform providers in Section 3, and identifiers and network activity may be "shared" with ad partners for cross-context behavioral advertising. We do not sell personal information for money, we do not knowingly sell or share the personal information of consumers under 16, and we do not collect sensitive personal information. You can opt out of sharing as described in Section 4. You have the right to know, delete and correct your personal information, and we will not discriminate against you for exercising these rights. We do not disclose personal information to third parties for their own direct marketing purposes (California "Shine the Light").</p>
 
-<p>本隐私政策适用于 <strong>DouZhuan Studio</strong>（下称"我们"）在 Google Play、Apple App Store 及其他平台发布的所有移动应用和游戏（下称"应用"），说明你使用我们的应用时会收集哪些信息、如何使用，以及你拥有的选择。</p>
-<p>并非每款应用都包含下文所述的全部功能或第三方服务。各条款仅适用于使用了相应功能的应用。</p>
+                <h3>South Korea</h3>
+                <ul>
+                    <li><strong>Items, purposes and retention:</strong> as described in Sections 1, 2 and 9. Information is destroyed without delay once its purpose has been achieved: data on your device when you delete it or uninstall the Product, and electronic files in a way that cannot be recovered.</li>
+                    <li><strong>Provision to third parties and outsourcing:</strong> we do not provide personal information to third parties beyond the services in Section 3, which process it on our behalf or under their own policies for advertising, analytics, payments and hosting.</li>
+                    <li><strong>Overseas transfer:</strong> device identifiers, IP address, usage and diagnostic data are transmitted over the network to the providers in Section 3 (such as Unity Technologies, Google LLC, AppLovin Corporation, Apple Inc. and Tencent), mainly in the United States, Singapore and other countries where they operate, while you use the Products, for the purposes in Section 2 and retained under their policies. You can refuse by declining tracking, turning off personalized ads or usage analytics, or not using the Product; personalized ads or some features may then be unavailable.</li>
+                    <li><strong>Automatic collection:</strong> advertising and analytics identifiers work like cookies in apps. You can refuse or reset them as described in Section 4.</li>
+                    <li><strong>Your rights:</strong> you (or, for children under 14, a legal guardian) can exercise the rights in Section 10, and we will respond within 10 days.</li>
+                    <li><strong>Privacy officer:</strong> DouZhuan Studio privacy team, reachable at the email address listed under "Developer contact" on the relevant product's Google Play store page.</li>
+                    <li><strong>Remedies:</strong> Personal Information Infringement Report Center (privacy.kisa.or.kr, 118), Personal Information Dispute Mediation Committee (www.kopico.go.kr, 1833-6972), Supreme Prosecutors' Office (www.spo.go.kr, 1301) and Korean National Police Agency (ecrm.police.go.kr, 182).</li>
+                </ul>
 
-<h2>1. 我们收集的信息</h2>
-<p>我们的应用无需注册账号，不会索取你的姓名、邮箱、手机号等联系方式。我们不运营存储你个人信息的服务器。</p>
+                <h3>Brazil</h3>
+                <p>Under the Lei Geral de Proteção de Dados (LGPD), the controller is DouZhuan Studio. We process personal data on the basis of performance of a contract, your consent (which you can revoke at any time), our legitimate interests and compliance with legal obligations. You have the rights set out in Article 18 of the LGPD: confirmation of processing, access, correction, anonymization, blocking or deletion of unnecessary or excessive data, portability, information about the entities with which data is shared, information about the possibility of not giving consent and its consequences, and revocation of consent. International transfers rely on the safeguards permitted by the LGPD. Our data protection officer (encarregado) can be reached using the email address listed under "Developer contact" on the relevant product's Google Play store page. You may also file a complaint with the Autoridade Nacional de Proteção de Dados (ANPD).</p>
 
-<h3>1.1 保存在你设备上的数据</h3>
-<p>为了正常运行，应用会在你的设备本地保存数据，例如游戏进度、存档、设置偏好和购买状态。这些数据只保留在你的设备上，不会发送给我们，卸载应用时会被删除。</p>
+                <h2 id="en-changes">12. Changes to this policy</h2>
+                <p>When we update this policy, we will post the new version on this page and update the "Last updated" date. For significant changes, we will also let you know in the Product or by other appropriate means.</p>
 
-<h3>1.2 你选择的照片和文件</h3>
-<p>部分应用允许你选择照片或文件，例如用你自己的图片进行游戏。应用使用系统选择器，只会收到你选中的内容，无法访问你的整个相册。所选内容仅在你的设备本地处理和保存，我们不会将其上传到服务器，也不会提供给第三方。</p>
+                <h2 id="en-contact">13. Contact us</h2>
+                <p>If you have any questions about this policy or want to exercise your rights, please contact:</p>
+                <ul>
+                    <li>DouZhuan Studio</li>
+                    <li>Contact: please use the email address listed under "Developer contact" on the relevant product's Google Play store page</li>
+                </ul>
+                <p>We will handle and respond to your request as soon as possible. See also our <a href="./terms.html">Terms of Service</a>.</p>
+            </article>
 
-<h3>1.3 第三方服务自动收集的信息</h3>
-<p>当应用展示广告或处理购买时，第 3 条所列的第三方服务可能自动收集以下信息：</p>
-<ul>
-  <li>设备标识符，例如 Google 广告 ID（Android）或 IDFA（iOS，仅在你允许跟踪时）；</li>
-  <li>设备和应用信息，例如设备型号、操作系统、语言、屏幕尺寸、网络类型和应用版本；</li>
-  <li>IP 地址，以及据此推断的大致位置；</li>
-  <li>使用和互动数据，例如展示或点击的广告；</li>
-  <li>诊断数据，例如崩溃日志和性能数据。</li>
-</ul>
+            <!-- ==================== 中文 ==================== -->
+            <article class="policy" data-lang="zh" lang="zh-CN">
+                <p>DouZhuan Studio（以下简称“我们”）非常重视您的隐私。本政策适用于我们发布的所有 App、游戏和小程序 / 小游戏（以下统称“产品”），无论您是通过 Apple App Store、Google Play、微信等小程序平台还是其他渠道获得。本政策说明产品会处理哪些信息、为什么处理、和谁共享，以及您拥有的选择和权利。</p>
+                <p>不同产品的功能不同，下文中写明“部分产品”的内容只适用于提供相应功能的产品。如某款产品有本政策未涵盖的处理方式，我们会在其商店页面或产品内另行说明。</p>
+                <p>简而言之：我们的产品<strong>不需要注册账号</strong>，不会要求您提供姓名、邮箱或电话号码；游戏数据大多只保存在您的设备上；广告、统计、支付和小程序运行由下文列出的第三方服务提供。<strong>我们不会出售您的个人信息。</strong></p>
 
-<h3>1.4 内容请求</h3>
-<p>部分应用会从我们的内容服务器或 CDN 下载图片、关卡等内容。这些请求包含你的 IP 地址和基本技术信息，仅用于传输内容。</p>
+                <h2 id="zh-collect">一、我们处理的信息</h2>
+                <h3>1. 仅保存在您设备上的数据</h3>
+                <p>游戏进度、存档、设置、成绩记录、已购项目的解锁状态、提醒时间等默认只保存在您的设备上，不会上传给我们。卸载 App 或删除小程序后，这些数据会一并删除。</p>
+                <h3>2. 您主动选择的照片和文件</h3>
+                <p>部分产品允许您从相册中选择照片或文件来制作内容。产品只能读取您选中的项目，它们在设备本地处理和保存，不会上传或分享给我们或任何第三方。</p>
+                <h3>3. 下载内容时的网络请求</h3>
+                <p>产品从我们的内容服务器 / CDN 下载图片、关卡等内容时，服务器会像所有网站一样收到您的 IP 地址和基本的技术信息（如请求时间），仅用于传输内容和保障服务正常运行。</p>
+                <h3>4. 小程序 / 小游戏</h3>
+                <p>在微信等平台运行的小程序，平台会向我们提供区分用户的匿名标识（例如 OpenID），我们不会因此获得您的微信号、昵称、手机号等信息，除非您在平台的授权弹窗中明确同意提供。部分小程序提供云端存档、排行榜等功能时，会把该标识和相关游戏数据保存在平台提供的云服务中，仅用于实现这些功能。</p>
+                <h3>5. 第三方服务自动收集的信息</h3>
+                <p>产品集成的广告、统计和支付服务（见第三条）可能自动收集：</p>
+                <ul>
+                    <li>设备标识符：iOS 上的广告标识符（IDFA，仅在您允许“跟踪”后）和供应商标识符（IDFV）；Android 上的广告 ID 和应用集 ID；Firebase 的应用实例 ID；</li>
+                    <li>设备与应用信息：设备型号、系统版本、语言、时区、产品版本等；</li>
+                    <li>根据 IP 地址推断的大致地区（我们不会读取 GPS 精确定位）；</li>
+                    <li>使用数据：例如玩了哪些关卡或内容、选择的难度、用时、使用了哪些功能，以及广告的展示与点击情况；</li>
+                    <li>诊断数据：例如崩溃和性能信息。</li>
+                </ul>
 
-<h2>2. 信息的用途</h2>
-<ul>
-  <li>提供应用功能并保存你的进度；</li>
-  <li>展示广告、控制广告频率、衡量广告效果和防止欺诈；</li>
-  <li>处理和恢复购买；</li>
-  <li>修复问题、改进应用。</li>
-</ul>
-<p>我们不出售你的个人信息。</p>
+                <h2 id="zh-use">二、我们如何使用这些信息</h2>
+                <ul>
+                    <li>提供产品功能、保存进度、发送您开启的提醒（本地通知在设备上安排，不经过我们的服务器）；</li>
+                    <li>展示广告、控制广告频次、衡量广告效果、防止广告作弊；</li>
+                    <li>处理和恢复购买；</li>
+                    <li>了解功能使用情况（汇总统计），修复问题、改进产品；</li>
+                    <li>远程调整产品配置（例如广告频率、活动内容），无需更新版本；</li>
+                    <li>保障安全、防止作弊和滥用，以及履行法律义务。</li>
+                </ul>
 
-<h2>3. 第三方服务</h2>
-<p>我们的应用可能使用以下第三方服务，它们依据各自的隐私政策收集和处理信息：</p>
-<ul>
-  <li><strong>AppLovin（MAX）</strong>：广告及广告聚合，<a href="https://www.applovin.com/privacy/" target="_blank" rel="noopener">https://www.applovin.com/privacy/</a>。AppLovin 可能与其他广告网络（聚合合作方）合作，合作方列表见其政策。</li>
-  <li><strong>Google AdMob</strong>：广告，<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></li>
-  <li><strong>Google Play 服务 / Google Play 结算</strong>：应用分发和应用内购买，<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></li>
-  <li><strong>Apple App Store / StoreKit</strong>：应用分发和应用内购买，<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">https://www.apple.com/legal/privacy/</a></li>
-</ul>
+                <h2 id="zh-third">三、第三方服务与信息共享</h2>
+                <p>我们的产品使用或可能使用以下第三方服务（每款产品只会用到其中一部分），它们按各自的隐私政策处理数据：</p>
+                <table>
+                    <thead>
+                        <tr><th>服务</th><th>用途</th><th>隐私政策</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Unity LevelPlay（ironSource）</td><td>广告聚合</td><td><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">查看</a></td></tr>
+                        <tr><td>Unity Ads</td><td>广告</td><td><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">查看</a></td></tr>
+                        <tr><td>Google AdMob</td><td>广告</td><td><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">查看</a></td></tr>
+                        <tr><td>AppLovin（MAX）</td><td>广告、广告聚合</td><td><a href="https://www.applovin.com/privacy/" target="_blank" rel="noopener">查看</a></td></tr>
+                        <tr><td>Google Firebase（Analytics、Remote Config）</td><td>使用统计、远程配置</td><td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">查看</a></td></tr>
+                        <tr><td>Apple App Store / StoreKit</td><td>分发、应用内购买</td><td><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">查看</a></td></tr>
+                        <tr><td>Google Play / Google Play 结算</td><td>分发、应用内购买</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">查看</a></td></tr>
+                        <tr><td>微信小程序平台、微信支付（腾讯）</td><td>小程序运行、用户标识、支付、云端存档</td><td><a href="https://weixin.qq.com/cgi-bin/readtemplate?lang=zh_CN&t=weixin_agreement&s=privacy" target="_blank" rel="noopener">查看</a></td></tr>
+                    </tbody>
+                </table>
+                <p>广告聚合平台还可能按其政策把广告请求转给其合作的广告网络。除上述服务外，我们只会在法律要求、保护我们或用户的合法权益，或公司合并、收购等情形下（接收方须继续遵守本政策）披露信息。我们新增或更换第三方服务时，会更新本表。</p>
+                <p><strong>我们不会出售您的个人信息。</strong>不过，广告合作方可能会使用设备的广告标识符展示个性化广告，部分法律（例如美国加州 CCPA/CPRA）把这类做法视为“共享”个人信息。您可以按第四条的方法拒绝跟踪或停用个性化广告。</p>
 
-<h2>4. 广告及你的选择</h2>
-<p>应用的免费版本可能展示广告，广告可能基于第 1.3 条所述信息进行个性化。你可以通过以下方式控制：</p>
-<ul>
-  <li><strong>iOS：</strong>应用会通过 Apple 的"App 跟踪透明度"弹窗征求你的许可，你可以随时在"设置 › 隐私与安全性 › 跟踪"中更改。</li>
-  <li><strong>Android：</strong>你可以在设备设置（通常为"设置 › 隐私 › 广告"）中重置或删除广告 ID，或停用个性化广告。</li>
-  <li><strong>欧洲经济区、英国和瑞士：</strong>展示个性化广告前，应用会征求你的同意。若应用内提供隐私选项，你可以在其中更改你的选择。</li>
-  <li><strong>去除广告：</strong>如应用提供付费升级（如 VIP 或"去广告"），购买后将关闭广告。</li>
-</ul>
+                <h2 id="zh-ads">四、广告与您的选择</h2>
+                <ul>
+                    <li><strong>iOS：</strong>首次需要时，系统会弹出“App 跟踪透明度”提示。您不允许跟踪时，广告不会使用 IDFA。可随时在“设置 › 隐私与安全性 › 跟踪”中修改。</li>
+                    <li><strong>Android：</strong>可在系统设置中重置或删除广告 ID，或选择停用个性化广告。</li>
+                    <li><strong>欧洲经济区、英国、瑞士：</strong>第一次展示广告前会征求您的同意。选择“只看非个性化广告”后仍会有广告，但不再使用广告 ID 做个性化。您可以随时在产品内的广告隐私设置中修改。</li>
+                    <li><strong>小程序：</strong>小程序中的广告由平台的广告组件提供，可在平台的个性化广告设置中管理。</li>
+                    <li><strong>去除广告：</strong>部分产品提供去广告的付费项目（例如 VIP），购买后不再展示广告。</li>
+                </ul>
 
-<h2>5. 应用内购买</h2>
-<p>购买由 Apple 或 Google 处理，你的支付信息由他们处理，不会提供给我们。应用只会收到购买确认信息（如商品 ID 和交易状态），用于解锁内容和恢复购买。</p>
+                <h2 id="zh-analytics">五、使用统计</h2>
+                <p>我们使用 Firebase Analytics 等工具了解汇总的使用情况（例如哪些内容更受欢迎、平均用时），以改进产品。统计数据通过随机生成的标识关联，不包含您的姓名、照片等信息，我们也不会用它识别您的身份。提供“使用统计”开关的产品中，您可以在设置里关闭，关闭后不再发送统计数据。</p>
 
-<h2>6. 分享和外部链接</h2>
-<p>你在应用中分享内容时，内容会交给设备系统的分享功能，由你决定分享到哪里。应用中可能包含指向外部网站的链接（例如图片署名），我们不对这些网站的隐私做法负责。</p>
+                <h2 id="zh-iap">六、购买与支付</h2>
+                <p>App 内的付款由 Apple 或 Google 处理，小程序内的付款由微信支付等平台处理。我们无法获得您的银行卡或账户等支付信息，只会收到商品 ID、订单和交易状态等确认信息，用于发放、解锁和恢复购买。</p>
 
-<h2>7. 儿童隐私</h2>
-<p>我们的应用面向一般受众，并非专为 13 岁以下儿童（或当地法律规定的更高年龄，如 16 岁）设计。我们不会在知情的情况下收集儿童的个人信息。如果你认为有儿童通过我们的应用提供了个人信息，请联系我们，我们会采取措施删除。</p>
+                <h2 id="zh-share">七、分享与外部链接</h2>
+                <p>分享成绩、图片等内容通过系统或平台的分享功能完成，分享给谁由您决定。产品中可能包含外部链接（例如图片来源的作者署名链接），这些网站的隐私做法不受本政策约束。</p>
 
-<h2>8. 数据保留与安全</h2>
-<p>保存在设备上的数据会一直保留，直到你删除或卸载应用。第三方服务收集的数据按其各自的政策保留。我们会采取合理措施保护信息，但任何存储或传输方式都无法做到绝对安全。</p>
+                <h2 id="zh-children">八、未成年人保护</h2>
+                <p>我们的产品面向一般大众，并非专门针对儿童。我们不会故意收集儿童的个人信息。各地区的年龄标准不同：中国大陆和韩国为不满 14 周岁，欧洲经济区和英国一般为不满 16 周岁（或当地法律规定的年龄），美国为不满 13 周岁，巴西为当地法律定义的儿童和青少年。未达到上述年龄的用户，应在监护人的同意和指导下使用产品。</p>
+                <p>在中国大陆提供的游戏会遵守未成年人防沉迷的相关规定，相关的实名认证和防沉迷措施通常由平台提供。如果您认为儿童向我们提供了个人信息，请联系我们，我们会核实后删除。</p>
 
-<h2>9. 你的权利</h2>
-<p>根据你所在地区的法律（例如 GDPR、英国 GDPR、CCPA/CPRA、中国《个人信息保护法》），你可能有权访问、更正或删除你的个人信息，反对或限制相关处理，并随时撤回同意。由于我们不在服务器上保存你的个人信息，大部分权利可以直接在设备上行使：在应用内删除数据、卸载应用、更改同意选择或重置广告标识符。对于第三方服务持有的数据，你可以直接联系他们，也可以联系我们，我们会尽力协助。你也有权向当地数据保护机构投诉。</p>
+                <h2 id="zh-retention">九、数据保存、安全与跨境</h2>
+                <p>设备上的数据保存到您删除或卸载产品为止。小程序云端存档在您删除小程序、请求删除或我们停止提供该功能后删除。第三方服务收集的数据按其政策保存。信息不再需要时，我们会以无法恢复的方式删除或匿名化。我们采取合理的技术和管理措施保护信息，但任何传输或存储方式都无法保证绝对安全。</p>
+                <p>第三方服务可能在您所在国家或地区以外处理数据（例如美国），并按其政策采取相应的保护措施，例如欧盟标准合同条款。</p>
 
-<h2>10. 政策变更</h2>
-<p>我们可能会不时更新本隐私政策。更新内容将发布在本页面，并修改"最近更新"日期。请定期查看。</p>
+                <h2 id="zh-rights">十、您的权利及行使方式</h2>
+                <p>根据您所在地区的法律，您可能有权查阅、复制、更正、删除个人信息，要求转移数据，限制或反对处理，撤回同意，以及注销账号（如适用）。</p>
+                <p>由于大部分数据只保存在您的设备上，您通常可以直接行使这些权利：删除产品内数据、卸载 App 或删除小程序、修改广告同意、拒绝跟踪、关闭使用统计或重置广告 ID。对于第三方收集的数据，您也可以直接联系对应服务。</p>
+                <p><strong>如需向我们提出请求，</strong>请通过对应产品在 Google Play 商店页面“开发者联系信息”中列出的邮箱联系我们，邮件主题写“隐私权利请求”，并说明：</p>
+                <ul>
+                    <li>产品名称和您使用的平台（iOS、Android 或小程序）；</li>
+                    <li>您的具体请求（例如查阅、删除或撤回同意）；</li>
+                    <li>如愿意提供，可附上帮助我们查找数据的标识（例如广告 ID 或小程序用户 ID）。我们只会要求核实和处理请求所必需的信息。</li>
+                </ul>
+                <p>我们会核实您的请求，并在适用法律规定的期限内答复（例如 GDPR 为一个月，CCPA 为 45 天，韩国《个人信息保护法》为 10 天）。在法律允许的情况下，您可以委托授权代理人提出请求，我们可能要求代理人提供授权证明。如我们无法满足您的请求，会说明原因；法律规定有申诉途径的，您可以回复我们的答复提出申诉。您也有权向当地的个人信息保护或数据保护机构投诉。</p>
 
-<h2>11. 联系我们</h2>
-<p>如果你对本隐私政策有任何疑问，请联系我们：<br>
-DouZhuan Studio<br>
-邮箱：<a href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a></p>
-</section>
-</main>
-<script>
-  (function () {
-    var q = new URLSearchParams(location.search).get('lang');
-    var nav = (navigator.language || '').toLowerCase();
-    var lang = q === 'zh' || q === 'en' ? q : (nav.indexOf('zh') === 0 ? 'zh' : 'en');
-    function set(l) {
-      document.documentElement.lang = l;
-      document.querySelectorAll('.lang a').forEach(function (a) {
-        a.className = a.dataset.set === l ? 'on' : '';
-      });
-    }
-    document.querySelectorAll('.lang a').forEach(function (a) {
-      a.addEventListener('click', function () { set(a.dataset.set); });
-    });
-    set(lang);
-  })();
-</script>
+                <h2 id="zh-regions">十一、地区补充说明</h2>
+                <h3>中国大陆</h3>
+                <p>我们按照《个人信息保护法》等法律法规处理个人信息，个人信息处理者为DouZhuan Studio。如涉及敏感个人信息、向境外提供个人信息等需要单独同意的情形，我们会另行征得您的同意。</p>
+
+                <h3>欧洲经济区、英国、瑞士</h3>
+                <p>我们处理个人信息的法律依据包括：为提供您请求的服务所必需（履行合同）；您的同意（例如个性化广告，可随时撤回）；我们的正当利益（例如统计分析、安全和防作弊，且不凌驾于您的权利之上）；以及遵守法律义务。</p>
+
+                <h3>美国（含加州）</h3>
+                <p>在过去 12 个月内，产品可能从您的设备和第三条所列的第三方服务收集以下类别的个人信息，用于第二条所述目的：</p>
+                <ul>
+                    <li><strong>标识符</strong>，例如设备标识符、广告标识符和 IP 地址；</li>
+                    <li><strong>互联网或其他电子网络活动信息</strong>，例如使用数据和广告互动；</li>
+                    <li><strong>大致地理位置</strong>，由 IP 地址推断；</li>
+                    <li><strong>商业信息</strong>，例如通过应用商店购买的记录；</li>
+                    <li><strong>推断信息</strong>，即广告合作方为展示更相关的广告而作出的推断。</li>
+                </ul>
+                <p>上述信息会出于业务目的披露给第三条中的统计、支付和平台服务商，其中标识符和网络活动信息可能会为跨情境行为广告与广告合作方“共享”。我们不会为金钱对价出售个人信息，不会在知情的情况下出售或共享 16 岁以下消费者的个人信息，也不会收集敏感个人信息。您可以按第四条的方法拒绝共享。您有权了解、删除和更正个人信息，我们不会因您行使这些权利而区别对待您。我们不会为第三方自身的直接营销目的向其披露个人信息（加州“Shine the Light”法律）。</p>
+
+                <h3>韩国</h3>
+                <ul>
+                    <li><strong>处理的项目、目的和保存期限：</strong>见第一、二、九条。目的达成后会立即销毁：设备上的数据在您删除或卸载产品时删除，电子文件以无法恢复的方式删除。</li>
+                    <li><strong>向第三方提供和委托处理：</strong>除第三条所列服务外，我们不向第三方提供个人信息；这些服务代表我们或按其自身政策提供广告、统计、支付和托管服务。</li>
+                    <li><strong>向境外转移：</strong>设备标识符、IP 地址、使用数据和诊断数据会在您使用产品时通过网络传输给第三条所列服务商（例如 Unity Technologies、Google LLC、AppLovin Corporation、Apple Inc.、腾讯），主要位于美国、新加坡及其运营所在的其他国家，用于第二条所述目的，并按其政策保存。您可以通过拒绝跟踪、关闭个性化广告或使用统计、不使用产品来拒绝，届时个性化广告或部分功能可能无法使用。</li>
+                    <li><strong>自动收集装置：</strong>App 中的广告和统计标识符的作用类似 Cookie，您可以按第四条的方法拒绝或重置。</li>
+                    <li><strong>您的权利：</strong>您（14 岁以下儿童由其法定代理人）可行使第十条所列权利，我们会在 10 天内答复。</li>
+                    <li><strong>个人信息保护负责人：</strong>DouZhuan Studio 隐私负责人，可通过对应产品在 Google Play 商店页面“开发者联系信息”中列出的邮箱联系。</li>
+                    <li><strong>救济途径：</strong>个人信息侵害举报中心（privacy.kisa.or.kr，118）、个人信息纠纷调解委员会（www.kopico.go.kr，1833-6972）、大检察厅（www.spo.go.kr，1301）、警察厅（ecrm.police.go.kr，182）。</li>
+                </ul>
+
+                <h3>巴西</h3>
+                <p>根据巴西《通用数据保护法》（LGPD），数据控制者为DouZhuan Studio。我们基于履行合同、您的同意（可随时撤回）、我们的正当利益以及遵守法律义务处理个人数据。您享有 LGPD 第 18 条规定的权利：确认是否处理、查阅、更正、对不必要或过度的数据进行匿名化、封存或删除、数据可携、了解与哪些主体共享数据、了解可以不同意及其后果，以及撤回同意。跨境传输依据 LGPD 允许的保障措施进行。我们的数据保护负责人（encarregado）可通过对应产品在 Google Play 商店页面“开发者联系信息”中列出的邮箱联系。您也可以向巴西国家数据保护局（ANPD）投诉。</p>
+
+                <h2 id="zh-changes">十二、政策变更</h2>
+                <p>本政策更新时，我们会在本页面发布新版本并更新“最近更新”日期。重大变更会在产品内或通过其他适当方式提示。</p>
+
+                <h2 id="zh-contact">十三、联系我们</h2>
+                <p>如对本政策有任何疑问，或需要行使您的权利，请联系：</p>
+                <ul>
+                    <li>DouZhuan Studio</li>
+                    <li>联系方式：请使用对应产品在 Google Play 商店页面“开发者联系信息”中列出的邮箱</li>
+                </ul>
+                <p>我们会尽快处理并回复您的请求。另请参阅我们的<a href="./terms.html">服务条款</a>。</p>
+            </article>
+
+            <!-- ==================== 한국어 ==================== -->
+            <article class="policy" data-lang="ko" lang="ko">
+                <p>DouZhuan Studio(이하 "당사")는 이용자의 개인정보를 소중히 여깁니다. 본 방침은 Apple App Store, Google Play, 위챗 등 미니 프로그램 플랫폼 또는 기타 경로로 제공되는 당사의 모든 앱, 게임 및 미니 프로그램/미니 게임(이하 통칭 "제품")에 적용되며, 제품이 어떤 정보를 처리하는지, 왜 처리하는지, 누구와 공유하는지, 그리고 이용자가 가진 선택권과 권리를 설명합니다.</p>
+                <p>제품마다 기능이 다르므로, 아래에서 "일부 제품"이라고 표시된 내용은 해당 기능을 제공하는 제품에만 적용됩니다. 특정 제품이 본 방침에서 다루지 않는 방식으로 정보를 처리하는 경우, 해당 제품의 스토어 페이지 또는 제품 내에서 별도로 안내합니다.</p>
+                <p>요약하면: 당사 제품은 <strong>회원가입이 필요 없으며</strong> 이름, 이메일, 전화번호를 요구하지 않습니다. 게임 데이터는 대부분 이용자의 기기에만 저장되며, 광고, 통계, 결제 및 미니 프로그램 운영은 아래에 기재된 제3자 서비스가 제공합니다. <strong>당사는 이용자의 개인정보를 판매하지 않습니다.</strong></p>
+
+                <h2 id="ko-collect">1. 처리하는 정보</h2>
+                <h3>1.1 기기에만 저장되는 데이터</h3>
+                <p>게임 진행 상황, 저장 데이터, 설정, 기록 및 점수, 구매 항목의 잠금 해제 상태, 알림 시간 등은 기본적으로 이용자의 기기에만 저장되며 당사로 전송되지 않습니다. 앱을 삭제하거나 미니 프로그램을 삭제하면 함께 삭제됩니다.</p>
+                <h3>1.2 이용자가 직접 선택한 사진 및 파일</h3>
+                <p>일부 제품에서는 콘텐츠를 만들기 위해 사진이나 파일을 선택할 수 있습니다. 제품은 이용자가 선택한 항목만 읽을 수 있으며, 해당 항목은 기기에서 처리·저장될 뿐 당사나 제3자에게 업로드되거나 공유되지 않습니다.</p>
+                <h3>1.3 콘텐츠 다운로드 시 네트워크 요청</h3>
+                <p>제품이 당사의 콘텐츠 서버/CDN에서 이미지, 레벨 등의 콘텐츠를 내려받을 때, 일반 웹사이트와 마찬가지로 서버는 이용자의 IP 주소와 기본적인 기술 정보(요청 시각 등)를 수신합니다. 이는 콘텐츠 전송과 서비스 운영에만 사용됩니다.</p>
+                <h3>1.4 미니 프로그램 및 미니 게임</h3>
+                <p>위챗 등 플랫폼에서 실행되는 미니 프로그램의 경우, 플랫폼은 이용자를 구분하기 위한 가명 식별자(예: OpenID)를 당사에 제공합니다. 이용자가 플랫폼의 권한 요청 창에서 명시적으로 동의하지 않는 한, 당사는 이를 통해 위챗 ID, 닉네임, 전화번호 등을 알 수 없습니다. 클라우드 저장이나 순위표 기능을 제공하는 미니 프로그램은 해당 식별자와 관련 게임 데이터를 플랫폼이 제공하는 클라우드 서비스에 저장하며, 이는 해당 기능을 제공하는 데에만 사용됩니다.</p>
+                <h3>1.5 제3자 서비스가 자동으로 수집하는 정보</h3>
+                <p>제품에 포함된 광고, 통계 및 결제 서비스(제3조 참조)는 다음 정보를 자동으로 수집할 수 있습니다.</p>
+                <ul>
+                    <li>기기 식별자: iOS의 광고 식별자(IDFA, 이용자가 "추적"을 허용한 경우에만) 및 공급업체 식별자(IDFV), Android의 광고 ID 및 앱 세트 ID, Firebase 앱 인스턴스 ID</li>
+                    <li>기기 및 앱 정보: 기기 모델, OS 버전, 언어, 시간대, 제품 버전 등</li>
+                    <li>IP 주소로 추정한 대략적인 지역(당사는 GPS 정밀 위치를 읽지 않습니다)</li>
+                    <li>이용 데이터: 플레이한 레벨이나 콘텐츠, 선택한 난이도, 소요 시간, 사용한 기능, 광고 노출 및 클릭 등</li>
+                    <li>진단 데이터: 충돌 및 성능 정보 등</li>
+                </ul>
+
+                <h2 id="ko-use">2. 정보의 이용 목적</h2>
+                <ul>
+                    <li>제품 기능 제공, 진행 상황 저장, 이용자가 설정한 알림 발송(로컬 알림은 기기에서 예약되며 당사 서버를 거치지 않음)</li>
+                    <li>광고 게재, 광고 빈도 제한, 광고 성과 측정 및 광고 부정행위 방지</li>
+                    <li>구매 처리 및 복원</li>
+                    <li>기능 이용 현황 파악(통계), 오류 수정 및 제품 개선</li>
+                    <li>업데이트 없이 제품 설정(예: 광고 빈도, 이벤트 내용)을 원격으로 조정</li>
+                    <li>보안 유지, 부정행위 및 악용 방지, 법적 의무 준수</li>
+                </ul>
+
+                <h2 id="ko-third">3. 제3자 서비스 및 정보 공유</h2>
+                <p>당사 제품은 다음 제3자 서비스를 이용하거나 이용할 수 있으며(각 제품은 그중 일부만 이용), 이들은 각자의 개인정보처리방침에 따라 데이터를 처리합니다.</p>
+                <table>
+                    <thead>
+                        <tr><th>서비스</th><th>목적</th><th>개인정보처리방침</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Unity LevelPlay (ironSource)</td><td>광고 미디에이션</td><td><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">보기</a></td></tr>
+                        <tr><td>Unity Ads</td><td>광고</td><td><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">보기</a></td></tr>
+                        <tr><td>Google AdMob</td><td>광고</td><td><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">보기</a></td></tr>
+                        <tr><td>AppLovin (MAX)</td><td>광고, 광고 미디에이션</td><td><a href="https://www.applovin.com/privacy/" target="_blank" rel="noopener">보기</a></td></tr>
+                        <tr><td>Google Firebase (Analytics, Remote Config)</td><td>이용 통계, 원격 구성</td><td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">보기</a></td></tr>
+                        <tr><td>Apple App Store / StoreKit</td><td>배포, 인앱 구매</td><td><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">보기</a></td></tr>
+                        <tr><td>Google Play / Google Play Billing</td><td>배포, 인앱 구매</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">보기</a></td></tr>
+                        <tr><td>WeChat Mini Programs, WeChat Pay (Tencent)</td><td>미니 프로그램 운영, 사용자 식별자, 결제, 클라우드 저장</td><td><a href="https://weixin.qq.com/cgi-bin/readtemplate?lang=zh_CN&t=weixin_agreement&s=privacy" target="_blank" rel="noopener">보기</a></td></tr>
+                    </tbody>
+                </table>
+                <p>광고 미디에이션 플랫폼은 자체 정책에 따라 광고 요청을 제휴 광고 네트워크에 전달할 수 있습니다. 위 서비스 외에는 법률이 요구하는 경우, 이용자 또는 당사의 정당한 권리를 보호하기 위한 경우, 합병·인수 등의 경우(수령자는 본 방침을 계속 준수해야 함)에만 정보를 공개합니다. 제3자 서비스를 추가하거나 변경하면 이 표를 업데이트합니다.</p>
+                <p><strong>당사는 이용자의 개인정보를 판매하지 않습니다.</strong> 다만 광고 파트너가 맞춤형 광고를 위해 기기의 광고 식별자를 사용할 수 있으며, 일부 법률(예: 미국 캘리포니아주 CCPA/CPRA)은 이를 개인정보의 "공유"로 봅니다. 제4조의 방법으로 추적을 거부하거나 맞춤형 광고를 끌 수 있습니다.</p>
+
+                <h2 id="ko-ads">4. 광고 및 이용자의 선택</h2>
+                <ul>
+                    <li><strong>iOS:</strong> 필요한 경우 시스템이 "앱 추적 투명성" 요청 창을 표시합니다. 추적을 허용하지 않으면 광고에 IDFA가 사용되지 않습니다. 언제든지 설정 › 개인정보 보호 및 보안 › 추적에서 변경할 수 있습니다.</li>
+                    <li><strong>Android:</strong> 기기 설정에서 광고 ID를 재설정 또는 삭제하거나 맞춤형 광고를 해제할 수 있습니다.</li>
+                    <li><strong>유럽경제지역, 영국, 스위스:</strong> 처음 광고를 표시하기 전에 동의를 요청합니다. 비맞춤형 광고를 선택해도 광고는 표시되지만 광고 ID는 맞춤화에 사용되지 않습니다. 언제든지 제품 내 광고 개인정보 설정에서 변경할 수 있습니다.</li>
+                    <li><strong>미니 프로그램:</strong> 미니 프로그램의 광고는 플랫폼의 광고 구성요소를 통해 제공되며, 플랫폼의 맞춤형 광고 설정에서 관리할 수 있습니다.</li>
+                    <li><strong>광고 제거:</strong> 일부 제품은 광고를 제거하는 유료 항목(예: VIP)을 제공하며, 구매하면 광고가 표시되지 않습니다.</li>
+                </ul>
+
+                <h2 id="ko-analytics">5. 이용 통계</h2>
+                <p>당사는 제품 개선을 위해 Firebase Analytics 등의 도구로 전체적인 이용 현황(예: 인기 콘텐츠, 평균 소요 시간)을 파악합니다. 통계 데이터는 무작위로 생성된 식별자와 연결되며 이름, 사진 등의 정보를 포함하지 않고, 당사는 이를 이용자 식별에 사용하지 않습니다. "이용 통계" 스위치를 제공하는 제품에서는 설정에서 끌 수 있으며, 끄면 더 이상 통계 데이터가 전송되지 않습니다.</p>
+
+                <h2 id="ko-iap">6. 구매 및 결제</h2>
+                <p>앱 내 결제는 Apple 또는 Google이, 미니 프로그램 내 결제는 위챗페이 등 해당 플랫폼이 처리합니다. 당사는 카드나 계정 등 결제 정보를 받지 않으며, 구매 지급·잠금 해제·복원을 위해 상품 ID, 주문 및 거래 상태 등의 확인 정보만 받습니다.</p>
+
+                <h2 id="ko-share">7. 공유 및 외부 링크</h2>
+                <p>기록, 이미지 등의 공유는 기기 또는 플랫폼의 공유 기능을 통해 이루어지며, 누구에게 공유할지는 이용자가 결정합니다. 제품에는 외부 링크(예: 이미지 출처의 작가 표시 링크)가 포함될 수 있으며, 해당 웹사이트의 개인정보 처리는 본 방침의 적용을 받지 않습니다.</p>
+
+                <h2 id="ko-children">8. 아동 및 미성년자 보호</h2>
+                <p>당사 제품은 일반 이용자를 대상으로 하며 아동을 대상으로 하지 않습니다. 당사는 아동의 개인정보를 고의로 수집하지 않습니다. 연령 기준은 지역마다 다릅니다: 중국 본토와 한국은 만 14세 미만, 유럽경제지역과 영국은 일반적으로 만 16세 미만(또는 현지 법률이 정한 연령), 미국은 만 13세 미만, 브라질은 현지 법률이 정한 아동 및 청소년입니다. 해당 연령 미만의 이용자는 부모 또는 법정대리인의 동의와 지도 아래 제품을 이용해야 합니다.</p>
+                <p>중국 본토에서 제공되는 게임은 미성년자 게임 중독 방지 관련 규정을 준수하며, 실명 인증 등의 조치는 일반적으로 플랫폼이 제공합니다. 아동이 당사에 개인정보를 제공했다고 생각되면 당사에 연락해 주세요. 확인 후 삭제하겠습니다.</p>
+
+                <h2 id="ko-retention">9. 보유 기간, 안전성 및 국외 이전</h2>
+                <p>기기에 저장된 데이터는 이용자가 삭제하거나 제품을 삭제할 때까지 보관됩니다. 미니 프로그램의 클라우드 저장 데이터는 미니 프로그램을 삭제하거나 삭제를 요청하거나 당사가 해당 기능을 종료하면 삭제됩니다. 제3자 서비스가 수집한 데이터는 해당 서비스의 정책에 따라 보관됩니다. 더 이상 필요하지 않은 정보는 복구할 수 없는 방식으로 삭제하거나 익명화합니다. 당사는 합리적인 기술적·관리적 보호조치를 취하지만, 어떠한 전송 또는 저장 방식도 완벽하게 안전할 수는 없습니다.</p>
+                <p>제3자 서비스는 이용자가 있는 국가 또는 지역 밖(예: 미국)에서 데이터를 처리할 수 있으며, 각자의 정책에 따라 EU 표준계약조항 등의 보호조치를 적용합니다.</p>
+
+                <h2 id="ko-rights">10. 이용자의 권리와 행사 방법</h2>
+                <p>거주 지역의 법률에 따라 이용자는 개인정보의 열람, 사본 요청, 정정, 삭제, 이동, 처리 제한 또는 처리 반대, 동의 철회, 계정 해지(해당되는 경우)를 요구할 권리가 있을 수 있습니다.</p>
+                <p>대부분의 데이터는 이용자의 기기에만 저장되므로, 제품 내 데이터 삭제, 앱 또는 미니 프로그램 삭제, 광고 동의 변경, 추적 거부, 이용 통계 끄기, 광고 ID 재설정 등을 통해 직접 권리를 행사할 수 있습니다. 제3자가 수집한 데이터에 대해서는 해당 서비스에 직접 문의할 수도 있습니다.</p>
+                <p><strong>당사에 요청하려면</strong> 해당 제품의 Google Play 스토어 페이지 '개발자 연락처'에 기재된 이메일로 "개인정보 권리 요청"이라는 제목으로 연락하시고 다음 내용을 알려 주세요.</p>
+                <ul>
+                    <li>제품명과 이용하는 플랫폼(iOS, Android 또는 미니 프로그램)</li>
+                    <li>요청 내용(예: 열람, 삭제 또는 동의 철회)</li>
+                    <li>원하시면 데이터를 찾는 데 도움이 되는 식별자(예: 광고 ID 또는 미니 프로그램 사용자 ID). 당사는 요청을 확인하고 처리하는 데 필요한 정보만 요청합니다.</li>
+                </ul>
+                <p>당사는 요청을 확인한 후 관련 법률이 정한 기간 내에 답변합니다(예: GDPR 1개월, CCPA 45일, 한국 개인정보 보호법 10일). 법률이 허용하는 경우 대리인을 통해 요청할 수 있으며, 당사는 대리인에게 위임 증빙을 요청할 수 있습니다. 요청을 이행할 수 없는 경우 그 이유를 설명하며, 법률이 이의 제기 절차를 정한 경우 당사의 답변에 회신하여 이의를 제기할 수 있습니다. 또한 현지 개인정보 보호 감독기관에 민원을 제기할 권리가 있습니다.</p>
+
+                <h2 id="ko-regions">11. 지역별 추가 안내</h2>
+                <h3>중국 본토</h3>
+                <p>당사는 「개인정보보호법」 등 관련 법령에 따라 개인정보를 처리하며, 개인정보 처리자는 DouZhuan Studio입니다. 민감정보 처리나 국외 제공 등 별도 동의가 필요한 경우에는 따로 동의를 받습니다.</p>
+
+                <h3>유럽경제지역, 영국, 스위스</h3>
+                <p>당사의 처리 근거는 다음과 같습니다: 이용자가 요청한 서비스 제공에 필요한 경우(계약 이행), 이용자의 동의(예: 맞춤형 광고, 언제든지 철회 가능), 당사의 정당한 이익(예: 통계 분석, 보안 및 부정행위 방지, 이용자의 권리를 침해하지 않는 범위), 법적 의무 준수.</p>
+
+                <h3>미국(캘리포니아 포함)</h3>
+                <p>지난 12개월 동안 제품은 제2조의 목적을 위해 이용자의 기기 및 제3조의 제3자 서비스로부터 다음 범주의 개인정보를 수집했을 수 있습니다.</p>
+                <ul>
+                    <li><strong>식별자</strong>: 기기 및 광고 식별자, IP 주소 등</li>
+                    <li><strong>인터넷 또는 기타 전자 네트워크 활동 정보</strong>: 이용 데이터 및 광고 상호작용 등</li>
+                    <li><strong>대략적인 위치</strong>: IP 주소로 추정</li>
+                    <li><strong>상업 정보</strong>: 앱 스토어를 통한 구매 기록 등</li>
+                    <li><strong>추론 정보</strong>: 광고 파트너가 더 관련성 높은 광고를 위해 도출하는 정보</li>
+                </ul>
+                <p>이 정보는 제3조의 통계, 결제 및 플랫폼 제공업체에 업무 목적으로 공개되며, 식별자와 네트워크 활동 정보는 교차 맥락 행동 광고를 위해 광고 파트너와 "공유"될 수 있습니다. 당사는 금전적 대가를 받고 개인정보를 판매하지 않으며, 16세 미만 소비자의 개인정보를 알면서 판매하거나 공유하지 않고, 민감한 개인정보를 수집하지 않습니다. 제4조의 방법으로 공유를 거부할 수 있습니다. 이용자는 개인정보를 알고, 삭제하고, 정정할 권리가 있으며, 당사는 권리 행사를 이유로 이용자를 차별하지 않습니다. 당사는 제3자의 직접 마케팅 목적으로 개인정보를 공개하지 않습니다(캘리포니아 "Shine the Light" 법).</p>
+
+                <h3>대한민국</h3>
+                <ul>
+                    <li><strong>처리하는 개인정보 항목, 목적 및 보유 기간:</strong> 제1조, 제2조 및 제9조와 같습니다. 처리 목적이 달성되면 지체 없이 파기하며, 기기의 데이터는 이용자가 삭제하거나 제품을 삭제할 때 삭제되고, 전자적 파일은 복구할 수 없는 방법으로 삭제합니다.</li>
+                    <li><strong>제3자 제공 및 처리 위탁:</strong> 제3조에 기재된 서비스 외에는 개인정보를 제3자에게 제공하지 않으며, 해당 서비스는 당사를 대신하거나 자체 정책에 따라 광고, 통계, 결제 및 호스팅을 제공합니다.</li>
+                    <li><strong>개인정보의 국외 이전:</strong> 기기 식별자, IP 주소, 이용 데이터 및 진단 데이터는 이용자가 제품을 이용하는 동안 네트워크를 통해 제3조의 제공업체(예: Unity Technologies, Google LLC, AppLovin Corporation, Apple Inc., Tencent)에 전송되며, 주로 미국, 싱가포르 및 해당 업체가 운영하는 기타 국가에서 제2조의 목적으로 처리되고 각 업체의 정책에 따라 보관됩니다. 추적 거부, 맞춤형 광고 또는 이용 통계 끄기, 제품 미사용 등으로 거부할 수 있으며, 이 경우 맞춤형 광고나 일부 기능을 이용하지 못할 수 있습니다.</li>
+                    <li><strong>개인정보 자동 수집 장치:</strong> 앱의 광고 및 통계 식별자는 쿠키와 유사한 역할을 하며, 제4조의 방법으로 거부하거나 재설정할 수 있습니다.</li>
+                    <li><strong>정보주체의 권리:</strong> 이용자(만 14세 미만 아동의 경우 법정대리인)는 제10조의 권리를 행사할 수 있으며, 당사는 10일 이내에 답변합니다.</li>
+                    <li><strong>개인정보 보호책임자:</strong> DouZhuan Studio 개인정보 보호 담당, 해당 제품의 Google Play 스토어 페이지 '개발자 연락처'에 기재된 이메일로 연락 가능</li>
+                    <li><strong>권익침해 구제방법:</strong> 개인정보침해신고센터(privacy.kisa.or.kr, 국번없이 118), 개인정보분쟁조정위원회(www.kopico.go.kr, 1833-6972), 대검찰청(www.spo.go.kr, 국번없이 1301), 경찰청(ecrm.police.go.kr, 국번없이 182)</li>
+                </ul>
+
+                <h3>브라질</h3>
+                <p>브라질 개인정보보호법(LGPD)에 따른 개인정보 처리자(controlador)는 DouZhuan Studio입니다. 당사는 계약 이행, 이용자의 동의(언제든지 철회 가능), 당사의 정당한 이익 및 법적 의무 준수를 근거로 개인정보를 처리합니다. 이용자는 LGPD 제18조의 권리(처리 여부 확인, 열람, 정정, 불필요하거나 과도한 데이터의 익명화·차단·삭제, 이동, 데이터를 공유한 주체에 관한 정보, 동의하지 않을 수 있다는 사실과 그 결과에 관한 정보, 동의 철회)를 가집니다. 국외 이전은 LGPD가 허용하는 보호조치에 따릅니다. 당사의 개인정보 보호담당자(encarregado)에게는 해당 제품의 Google Play 스토어 페이지 '개발자 연락처'에 기재된 이메일로 연락할 수 있습니다. 브라질 국가개인정보보호청(ANPD)에 민원을 제기할 수도 있습니다.</p>
+
+                <h2 id="ko-changes">12. 방침의 변경</h2>
+                <p>본 방침이 변경되면 이 페이지에 새 버전을 게시하고 "최종 수정일"을 업데이트합니다. 중요한 변경 사항은 제품 내 또는 기타 적절한 방법으로 안내합니다.</p>
+
+                <h2 id="ko-contact">13. 문의처</h2>
+                <p>본 방침에 관한 문의나 권리 행사는 아래로 연락해 주세요.</p>
+                <ul>
+                    <li>DouZhuan Studio</li>
+                    <li>연락처: 해당 제품의 Google Play 스토어 페이지 '개발자 연락처'에 기재된 이메일을 이용해 주세요</li>
+                </ul>
+                <p>요청은 최대한 신속하게 처리하고 답변하겠습니다. 당사의 <a href="./terms.html">서비스 약관</a>도 참고해 주세요.</p>
+            </article>
+
+            <!-- ==================== Português ==================== -->
+            <article class="policy" data-lang="pt" lang="pt-BR">
+                <p>A DouZhuan Studio ("nós") se preocupa com a sua privacidade. Esta política se aplica a todos os apps, jogos e miniprogramas / minijogos que publicamos (em conjunto, os "Produtos"), obtidos pela Apple App Store, Google Play, WeChat ou outra plataforma de miniprogramas, ou por qualquer outro canal. Ela explica quais informações os Produtos tratam, por quê, com quem são compartilhadas e quais são as suas escolhas e direitos.</p>
+                <p>Os recursos variam entre os Produtos: o que for descrito abaixo como aplicável a "alguns Produtos" vale apenas para os Produtos que oferecem esse recurso. Se um Produto tratar dados de forma não prevista nesta política, informaremos isso na página da loja ou no próprio Produto.</p>
+                <p>Em resumo: nossos Produtos <strong>não exigem cadastro</strong> e não pedem seu nome, e-mail ou telefone; a maior parte dos dados do jogo fica no seu dispositivo; e publicidade, análise de uso, pagamentos e hospedagem de miniprogramas são fornecidos pelos serviços de terceiros listados abaixo. <strong>Não vendemos suas informações pessoais.</strong></p>
+
+                <h2 id="pt-collect">1. Informações que tratamos</h2>
+                <h3>1.1 Dados que ficam no seu dispositivo</h3>
+                <p>Por padrão, progresso, jogos salvos, configurações, recordes e pontuações, o status de desbloqueio de itens comprados e os horários de lembretes ficam armazenados apenas no seu dispositivo e não são enviados para nós. Eles são apagados quando você desinstala o app ou exclui o miniprograma.</p>
+                <h3>1.2 Fotos e arquivos que você escolhe</h3>
+                <p>Alguns Produtos permitem escolher fotos ou arquivos para criar conteúdo. O Produto só consegue ler os itens selecionados por você; eles são processados e armazenados localmente no seu dispositivo e nunca são enviados ou compartilhados conosco ou com terceiros.</p>
+                <h3>1.3 Requisições de rede para conteúdo</h3>
+                <p>Quando um Produto baixa imagens, fases ou outros conteúdos dos nossos servidores de conteúdo / CDN, esses servidores recebem seu endereço IP e dados técnicos básicos (como o horário da requisição), como acontece com qualquer site. Isso é usado apenas para entregar o conteúdo e manter o serviço funcionando.</p>
+                <h3>1.4 Miniprogramas e minijogos</h3>
+                <p>Em miniprogramas executados no WeChat ou em plataformas semelhantes, a plataforma nos fornece um identificador pseudônimo que distingue os usuários (como um OpenID). Isso não nos dá acesso ao seu ID do WeChat, apelido ou telefone, a menos que você concorde expressamente em compartilhá-los na janela de permissão da plataforma. Quando um miniprograma oferece salvamento na nuvem ou rankings, esse identificador e os dados de jogo relacionados são armazenados no serviço de nuvem da plataforma, apenas para fornecer esses recursos.</p>
+                <h3>1.5 Informações coletadas automaticamente por terceiros</h3>
+                <p>Os serviços de publicidade, análise e pagamento integrados aos Produtos (veja a Seção 3) podem coletar automaticamente:</p>
+                <ul>
+                    <li>Identificadores do dispositivo: no iOS, o Identificador de Publicidade (IDFA, somente se você permitir o rastreamento) e o Identificador do Fornecedor (IDFV); no Android, o ID de publicidade e o ID do conjunto de apps; e o ID de instância do app do Firebase;</li>
+                    <li>Informações do dispositivo e do app, como modelo, versão do sistema, idioma, fuso horário e versão do Produto;</li>
+                    <li>Região aproximada inferida a partir do endereço IP (nunca lemos a localização precisa por GPS);</li>
+                    <li>Dados de uso, como fases ou conteúdos jogados, dificuldade escolhida, tempo gasto, recursos utilizados e visualizações e cliques em anúncios;</li>
+                    <li>Dados de diagnóstico, como falhas e informações de desempenho.</li>
+                </ul>
+
+                <h2 id="pt-use">2. Como usamos as informações</h2>
+                <ul>
+                    <li>Para fornecer os recursos dos Produtos, salvar seu progresso e enviar os lembretes que você ativar (notificações locais agendadas no seu dispositivo, sem passar pelos nossos servidores);</li>
+                    <li>Para exibir anúncios, limitar a frequência, medir o desempenho e evitar fraudes de publicidade;</li>
+                    <li>Para processar e restaurar compras;</li>
+                    <li>Para entender como os recursos são usados (de forma agregada), corrigir problemas e melhorar os Produtos;</li>
+                    <li>Para ajustar configurações dos Produtos remotamente (por exemplo, frequência de anúncios ou conteúdo de eventos) sem atualização;</li>
+                    <li>Para manter os Produtos seguros, evitar trapaças e abusos e cumprir obrigações legais.</li>
+                </ul>
+
+                <h2 id="pt-third">3. Serviços de terceiros e compartilhamento</h2>
+                <p>Nossos Produtos usam, ou podem usar, os seguintes serviços (cada Produto usa apenas alguns deles), que tratam dados conforme suas próprias políticas de privacidade:</p>
+                <table>
+                    <thead>
+                        <tr><th>Serviço</th><th>Finalidade</th><th>Política de privacidade</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Unity LevelPlay (ironSource)</td><td>Mediação de anúncios</td><td><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">Ver</a></td></tr>
+                        <tr><td>Unity Ads</td><td>Publicidade</td><td><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">Ver</a></td></tr>
+                        <tr><td>Google AdMob</td><td>Publicidade</td><td><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Ver</a></td></tr>
+                        <tr><td>AppLovin (MAX)</td><td>Publicidade, mediação de anúncios</td><td><a href="https://www.applovin.com/privacy/" target="_blank" rel="noopener">Ver</a></td></tr>
+                        <tr><td>Google Firebase (Analytics, Remote Config)</td><td>Análise de uso, configuração remota</td><td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Ver</a></td></tr>
+                        <tr><td>Apple App Store / StoreKit</td><td>Distribuição, compras no app</td><td><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Ver</a></td></tr>
+                        <tr><td>Google Play / Google Play Billing</td><td>Distribuição, compras no app</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Ver</a></td></tr>
+                        <tr><td>WeChat Mini Programs, WeChat Pay (Tencent)</td><td>Hospedagem de miniprogramas, identificadores de usuário, pagamentos, salvamento na nuvem</td><td><a href="https://weixin.qq.com/cgi-bin/readtemplate?lang=zh_CN&t=weixin_agreement&s=privacy" target="_blank" rel="noopener">Ver</a></td></tr>
+                    </tbody>
+                </table>
+                <p>As plataformas de mediação de anúncios também podem repassar solicitações de anúncios às redes parceiras, conforme suas próprias políticas. Fora desses serviços, só divulgamos informações quando exigido por lei, para proteger os direitos dos nossos usuários ou os nossos, ou em caso de fusão, aquisição ou operação semelhante (em que o destinatário deverá continuar respeitando esta política). Atualizaremos esta tabela quando incluirmos ou trocarmos serviços de terceiros.</p>
+                <p><strong>Não vendemos suas informações pessoais.</strong> No entanto, nossos parceiros de publicidade podem usar o identificador de publicidade do seu dispositivo para exibir anúncios personalizados, o que algumas leis (como a CCPA/CPRA da Califórnia) consideram "compartilhamento" de informações pessoais. Você pode recusar isso negando o rastreamento ou desativando os anúncios personalizados, conforme a Seção 4.</p>
+
+                <h2 id="pt-ads">4. Publicidade e suas escolhas</h2>
+                <ul>
+                    <li><strong>iOS:</strong> quando necessário, o sistema exibe a solicitação de Transparência de Rastreamento de Apps da Apple. Se você não permitir o rastreamento, os anúncios não usarão o IDFA. Você pode mudar isso a qualquer momento em Ajustes › Privacidade e Segurança › Rastreamento.</li>
+                    <li><strong>Android:</strong> você pode redefinir ou excluir o ID de publicidade, ou desativar anúncios personalizados, nas configurações do dispositivo.</li>
+                    <li><strong>EEE, Reino Unido e Suíça:</strong> pedimos seu consentimento antes de exibir anúncios pela primeira vez. Se você escolher anúncios não personalizados, continuará vendo anúncios, mas o ID de publicidade não será usado para personalizá-los. Você pode mudar isso a qualquer momento nas configurações de privacidade de anúncios do Produto.</li>
+                    <li><strong>Miniprogramas:</strong> os anúncios em miniprogramas são exibidos pelos componentes de anúncio da plataforma e podem ser gerenciados nas configurações de anúncios personalizados da plataforma.</li>
+                    <li><strong>Remover anúncios:</strong> alguns Produtos oferecem uma opção paga (como o VIP) que desativa os anúncios.</li>
+                </ul>
+
+                <h2 id="pt-analytics">5. Análise de uso</h2>
+                <p>Usamos ferramentas como o Firebase Analytics para entender o uso de forma agregada (por exemplo, quais conteúdos são mais populares e o tempo médio de conclusão) e assim melhorar os Produtos. Os dados de análise são vinculados a um identificador gerado aleatoriamente, não incluem seu nome, fotos ou dados semelhantes, e não os usamos para identificar você. Nos Produtos que oferecem a opção de estatísticas de uso, você pode desativá-la nas Configurações; depois disso, nenhum dado de análise é enviado.</p>
+
+                <h2 id="pt-iap">6. Compras e pagamentos</h2>
+                <p>Os pagamentos dentro dos apps são processados pela Apple ou pelo Google, e os pagamentos em miniprogramas pelo WeChat Pay ou pela plataforma correspondente. Nunca recebemos os dados do seu cartão ou conta; recebemos apenas dados de confirmação, como o ID do produto, o pedido e o status da transação, para entregar, desbloquear e restaurar compras.</p>
+
+                <h2 id="pt-share">7. Compartilhamento e links externos</h2>
+                <p>O compartilhamento de resultados, imagens ou outros conteúdos usa a função de compartilhar do dispositivo ou da plataforma, e você decide quem recebe. Os Produtos podem conter links externos (por exemplo, créditos com link para o autor de uma imagem); as práticas de privacidade desses sites não são cobertas por esta política.</p>
+
+                <h2 id="pt-children">8. Crianças e adolescentes</h2>
+                <p>Nossos Produtos são destinados ao público em geral e não são direcionados a crianças. Não coletamos intencionalmente informações pessoais de crianças. Os limites de idade variam conforme a região: menores de 14 anos na China continental e na Coreia do Sul, em geral menores de 16 anos no EEE e no Reino Unido (ou a idade definida pela lei local), menores de 13 anos nos Estados Unidos e, no Brasil, crianças e adolescentes conforme definidos em lei. Usuários abaixo dessas idades devem usar os Produtos somente com o consentimento e a orientação dos pais ou responsáveis.</p>
+                <p>Os jogos oferecidos na China continental seguem as regras aplicáveis de prevenção do vício em jogos entre menores; a verificação de identidade e os controles relacionados geralmente são fornecidos pela plataforma. Se você acredita que uma criança nos forneceu informações pessoais, entre em contato e as excluiremos após a verificação.</p>
+
+                <h2 id="pt-retention">9. Retenção, segurança e transferências internacionais</h2>
+                <p>Os dados no seu dispositivo são mantidos até que você os apague ou desinstale o Produto. Os salvamentos na nuvem de miniprogramas são excluídos quando você exclui o miniprograma, pede a exclusão ou quando deixamos de oferecer o recurso. Os dados coletados por serviços de terceiros são mantidos conforme as políticas deles. Quando as informações deixam de ser necessárias, são excluídas ou anonimizadas de forma irreversível. Adotamos medidas técnicas e administrativas razoáveis para proteger as informações, mas nenhum método de transmissão ou armazenamento é totalmente seguro.</p>
+                <p>Serviços de terceiros podem tratar dados fora do seu país ou região (por exemplo, nos Estados Unidos), com salvaguardas como as Cláusulas Contratuais Padrão da UE, conforme descrito em suas políticas.</p>
+
+                <h2 id="pt-rights">10. Seus direitos e como exercê-los</h2>
+                <p>Dependendo de onde você mora, você pode ter o direito de acessar, obter cópia, corrigir ou excluir suas informações pessoais, à portabilidade dos dados, de restringir ou se opor ao tratamento, de revogar o consentimento e de encerrar sua conta (quando aplicável).</p>
+                <p>Como a maior parte dos dados fica no seu dispositivo, normalmente você pode exercer esses direitos diretamente: apagando os dados do Produto, desinstalando o app ou excluindo o miniprograma, alterando seu consentimento de anúncios, negando o rastreamento, desativando as estatísticas de uso ou redefinindo seu ID de publicidade. Para dados coletados por terceiros, você também pode contatar esses serviços diretamente.</p>
+                <p><strong>Para fazer uma solicitação a nós,</strong> entre em contato por meio de o e-mail indicado em "Contato do desenvolvedor" na página do produto na Google Play com o assunto "Solicitação de Direitos de Privacidade" e informe:</p>
+                <ul>
+                    <li>O nome do Produto e a plataforma que você usa (iOS, Android ou miniprograma);</li>
+                    <li>O que você está solicitando (por exemplo, acesso, exclusão ou revogação do consentimento);</li>
+                    <li>Se quiser, algum identificador que nos ajude a localizar os dados (por exemplo, seu ID de publicidade ou o ID de usuário do miniprograma). Não pedimos mais informações do que o necessário para verificar e atender sua solicitação.</li>
+                </ul>
+                <p>Verificaremos sua solicitação e responderemos no prazo exigido pela lei aplicável (por exemplo, um mês pelo GDPR, 45 dias pela CCPA, 10 dias pela PIPA da Coreia do Sul e, no Brasil, nos prazos da LGPD). Quando a lei permitir, você pode usar um representante autorizado; poderemos pedir comprovação da autorização. Se não pudermos atender à sua solicitação, explicaremos o motivo e, quando a lei previr, você poderá recorrer respondendo à nossa resposta. Você também tem o direito de reclamar à autoridade de proteção de dados do seu país.</p>
+
+                <h2 id="pt-regions">11. Informações adicionais por região</h2>
+                <h3>China continental</h3>
+                <p>Tratamos informações pessoais de acordo com a Lei de Proteção de Informações Pessoais (PIPL) e normas relacionadas; o responsável pelo tratamento é DouZhuan Studio. Quando for exigido consentimento específico, como para informações pessoais sensíveis ou transferências para fora da China, nós o solicitaremos separadamente.</p>
+
+                <h3>EEE, Reino Unido e Suíça</h3>
+                <p>As bases legais para o tratamento são: necessidade para prestar o serviço que você solicita (execução de contrato); seu consentimento (por exemplo, para anúncios personalizados, que você pode revogar a qualquer momento); nossos interesses legítimos (por exemplo, análise de uso, segurança e prevenção de fraudes, desde que não prevaleçam sobre seus direitos); e o cumprimento de obrigações legais.</p>
+
+                <h3>Estados Unidos (incluindo a Califórnia)</h3>
+                <p>Nos últimos 12 meses, os Produtos podem ter coletado as seguintes categorias de informações pessoais, a partir do seu dispositivo e dos serviços de terceiros da Seção 3, para as finalidades da Seção 2:</p>
+                <ul>
+                    <li><strong>Identificadores</strong>, como identificadores do dispositivo e de publicidade e endereço IP;</li>
+                    <li><strong>Atividade na internet ou em outras redes eletrônicas</strong>, como dados de uso e interações com anúncios;</li>
+                    <li><strong>Geolocalização aproximada</strong>, inferida a partir do endereço IP;</li>
+                    <li><strong>Informações comerciais</strong>, como registros de compras feitas pelas lojas de apps;</li>
+                    <li><strong>Inferências</strong> que parceiros de publicidade podem fazer para exibir anúncios mais relevantes.</li>
+                </ul>
+                <p>Essas categorias são divulgadas para fins comerciais aos provedores de análise, pagamento e plataforma da Seção 3, e identificadores e atividade de rede podem ser "compartilhados" com parceiros de publicidade para publicidade comportamental entre contextos. Não vendemos informações pessoais por dinheiro, não vendemos nem compartilhamos intencionalmente informações pessoais de consumidores menores de 16 anos e não coletamos informações pessoais sensíveis. Você pode recusar o compartilhamento conforme a Seção 4. Você tem o direito de saber, excluir e corrigir suas informações pessoais, e não o discriminaremos por exercer esses direitos. Não divulgamos informações pessoais a terceiros para fins de marketing direto deles (lei "Shine the Light" da Califórnia).</p>
+
+                <h3>Coreia do Sul</h3>
+                <ul>
+                    <li><strong>Itens, finalidades e retenção:</strong> conforme as Seções 1, 2 e 9. As informações são destruídas sem demora quando a finalidade é atingida: os dados do dispositivo quando você os apaga ou desinstala o Produto, e os arquivos eletrônicos de forma irrecuperável.</li>
+                    <li><strong>Fornecimento a terceiros e terceirização:</strong> não fornecemos informações pessoais a terceiros além dos serviços da Seção 3, que as tratam em nosso nome ou conforme suas próprias políticas para publicidade, análise, pagamentos e hospedagem.</li>
+                    <li><strong>Transferência internacional:</strong> identificadores do dispositivo, endereço IP, dados de uso e de diagnóstico são transmitidos pela rede aos provedores da Seção 3 (como Unity Technologies, Google LLC, AppLovin Corporation, Apple Inc. e Tencent), principalmente nos Estados Unidos, em Singapura e em outros países onde operam, enquanto você usa os Produtos, para as finalidades da Seção 2, e retidos conforme suas políticas. Você pode recusar negando o rastreamento, desativando anúncios personalizados ou estatísticas de uso, ou não usando o Produto; nesse caso, anúncios personalizados ou alguns recursos podem ficar indisponíveis.</li>
+                    <li><strong>Coleta automática:</strong> os identificadores de publicidade e de análise funcionam de forma semelhante a cookies em apps. Você pode recusá-los ou redefini-los conforme a Seção 4.</li>
+                    <li><strong>Seus direitos:</strong> você (ou, para menores de 14 anos, o representante legal) pode exercer os direitos da Seção 10, e responderemos em até 10 dias.</li>
+                    <li><strong>Responsável pela privacidade:</strong> equipe de privacidade da DouZhuan Studio, pelo o e-mail indicado em "Contato do desenvolvedor" na página do produto na Google Play.</li>
+                    <li><strong>Canais de reclamação:</strong> Personal Information Infringement Report Center (privacy.kisa.or.kr, 118), Personal Information Dispute Mediation Committee (www.kopico.go.kr, 1833-6972), Supreme Prosecutors' Office (www.spo.go.kr, 1301) e Korean National Police Agency (ecrm.police.go.kr, 182).</li>
+                </ul>
+
+                <h3>Brasil</h3>
+                <p>Nos termos da Lei Geral de Proteção de Dados (LGPD), o controlador é DouZhuan Studio. Tratamos dados pessoais com base na execução de contrato, no seu consentimento (que pode ser revogado a qualquer momento), em nossos interesses legítimos e no cumprimento de obrigações legais. Você tem os direitos previstos no art. 18 da LGPD: confirmação da existência de tratamento; acesso aos dados; correção de dados incompletos, inexatos ou desatualizados; anonimização, bloqueio ou eliminação de dados desnecessários ou excessivos; portabilidade; informação sobre as entidades com as quais os dados foram compartilhados; informação sobre a possibilidade de não fornecer consentimento e suas consequências; e revogação do consentimento. As transferências internacionais seguem as salvaguardas permitidas pela LGPD. Nosso encarregado pelo tratamento de dados pessoais pode ser contatado por meio de o e-mail indicado em "Contato do desenvolvedor" na página do produto na Google Play. Você também pode apresentar reclamação à Autoridade Nacional de Proteção de Dados (ANPD).</p>
+
+                <h2 id="pt-changes">12. Alterações nesta política</h2>
+                <p>Quando atualizarmos esta política, publicaremos a nova versão nesta página e atualizaremos a data de "Última atualização". Em caso de mudanças relevantes, também avisaremos no Produto ou por outros meios adequados.</p>
+
+                <h2 id="pt-contact">13. Fale conosco</h2>
+                <p>Se tiver dúvidas sobre esta política ou quiser exercer seus direitos, entre em contato:</p>
+                <ul>
+                    <li>DouZhuan Studio</li>
+                    <li>Contato: use o e-mail indicado em "Contato do desenvolvedor" na página do produto na Google Play</li>
+                </ul>
+                <p>Trataremos e responderemos sua solicitação o mais rápido possível. Veja também nossos <a href="./terms.html">Termos de Serviço</a>.</p>
+            </article>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 py-10">
+        <div class="container mx-auto px-6 text-center text-sm">
+            <p class="mb-2">© 2026 DouZhuan Studio. All Rights Reserved.</p>
+            <p class="flex flex-wrap justify-center gap-x-4 gap-y-1">
+                <a href="./privacy.html" class="hover:text-white transition hover:underline">Privacy Policy · 隐私政策</a>
+                <a href="./terms.html" class="hover:text-white transition hover:underline">Terms of Service · 服务条款</a>
+                
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            var root = document.documentElement;
+            var titles = {en: 'Privacy Policy | DouZhuan Studio', zh: '隐私政策 | DouZhuan Studio', ko: '개인정보처리방침 | DouZhuan Studio', pt: 'Política de Privacidade | DouZhuan Studio'};
+            var htmlLang = {en: 'en', zh: 'zh-CN', ko: 'ko', pt: 'pt-BR'};
+            var select = document.getElementById('lang-select');
+            function apply(lang) {
+                root.setAttribute('data-show', lang);
+                root.lang = htmlLang[lang];
+                document.title = titles[lang];
+                select.value = lang;
+            }
+            select.addEventListener('change', function () {
+                var url = new URL(location.href);
+                url.searchParams.set('lang', select.value);
+                history.replaceState(null, '', url);
+                apply(select.value);
+            });
+            apply(root.getAttribute('data-show'));
+        })();
+    </script>
 </body>
+
 </html>
